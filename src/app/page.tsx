@@ -105,7 +105,7 @@ export default function Home() {
           transition={{ duration: 2 }}
         >
           <div
-            className="flex items-center md:w-[600px]"
+            className="flex items-center md:w-[650px]"
             style={{
               backgroundColor: `rgba(62, 62, 60, 0.5) `,
               borderRadius: 20,
@@ -118,7 +118,7 @@ export default function Home() {
               alt=""
               className="rounded-l-2xl w-24 h-24"
             />
-            <h2 className="p-5 md:text-2xl text-xl font-semibold text-center">
+            <h2 className="p-5 md:text-2xl text-xl text-green-500 tracking-wider font-semibold text-center">
               Precisa declarar seu imposto de renda?
             </h2>
           </div>
@@ -132,7 +132,7 @@ export default function Home() {
           transition={{ duration: 2 }}
         >
           <div
-            className="flex items-center md:w-[600px]"
+            className="flex items-center md:w-[650px]"
             style={{
               backgroundColor: `rgba(62, 62, 60, 0.5) `,
               borderRadius: 20,
@@ -145,8 +145,8 @@ export default function Home() {
               alt=""
               className="rounded-l-2xl w-24 h-24"
             />
-            <h2 className="p-5 md:text-2xl text-xl font-semibold text-center">
-              Evite multas! Deixe especialistas.
+            <h2 className="p-5 md:text-2xl text-xl text-green-500 tracking-wider font-semibold text-center">
+              Evite multas! Deixe com um especialistas.
             </h2>
           </div>
         </motion.div>
@@ -159,7 +159,7 @@ export default function Home() {
           transition={{ duration: 2 }}
         >
           <div
-            className="flex items-center md:w-[600px]"
+            className="flex items-center md:w-[650px]"
             style={{
               backgroundColor: `rgba(62, 62, 60, 0.5) `,
               borderRadius: 20,
@@ -172,7 +172,7 @@ export default function Home() {
               alt=""
               className="rounded-l-2xl w-24 h-24"
             />
-            <h2 className="p-5 md:text-2xl text-xl font-semibold text-center">
+            <h2 className="p-5 md:text-2xl text-xl text-green-500 tracking-wider font-semibold text-center">
               Não deixe para última hora.
             </h2>
           </div>
@@ -186,7 +186,7 @@ export default function Home() {
           transition={{ duration: 2 }}
         >
           <div
-            className="flex items-center md:w-[600px]"
+            className="flex items-center md:w-[650px]"
             style={{
               backgroundColor: `rgba(62, 62, 60, 0.5) `,
               borderRadius: 20,
@@ -199,7 +199,7 @@ export default function Home() {
               alt=""
               className="rounded-l-2xl w-24 h-24"
             />
-            <h2 className="p-5 md:text-2xl text-xl font-semibold text-center">
+            <h2 className="p-5 md:text-2xl text-xl text-green-500 tracking-wider font-semibold text-center">
               Nossa equipe esta preparada.
             </h2>
           </div>
@@ -220,6 +220,7 @@ export default function Home() {
       {/* sessão 2 */}
       <section className=" py-16 h-auto bg-sky-700">
         <div className="container mx-auto flex flex-col justify-center items-center px-10">
+
           <motion.div
             initial={{ opacity: 0, scale: 0 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -302,13 +303,15 @@ export default function Home() {
               transition={{ duration: 2 }}
               className="flex-1"
             >
+
               <Image
-                src="/home-leao2.jpg"
+                src="/leao2.jpg"
                 width={500}
                 height={100}
                 alt=""
                 className="flex w-full h-full rounded-2xl"
               />
+
             </motion.div>
 
             <div className="flex-1 p-10 flex flex-col gap-14">
@@ -319,14 +322,17 @@ export default function Home() {
                 exit={{ opacity: 0, scale: 0, x: -100 }}
                 transition={{ duration: 2 }}
               >
-                <div className="flex gap-2 bg-amber-600 h-40 p-2 rounded-l-4xl items-center">
+                <div
+                  style={{ backgroundColor: `rgba(62, 62, 60, 0.5)`, borderRadius: 20 }}
+                  className="flex flex-col md:flex-row gap-2 h-auto p-2 rounded-l-4xl items-center"
+                >
 
-                  <div className="bg-green-600 w-60 md:h-36 h-20 rounded-full"> </div>
+                  <Image src="/imposto.jpg" width={100} height={100} alt="" className="bg-green-600 w-36 md:h-36 h-20 rounded-full" />
 
-                  <div className="p-2  flex items-center">
-                    <h2>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Necessitatibus pariatur sunt, odit illum cupiditate voluptate
+                  <div className="p-2 flex items-center ">
+                    <h2 className="text-2xl text-green-500 font-semibold">
+                      O Imposto de Renda financia saúde, educação e infraestrutura,
+                      garantindo recursos para o país e regularizando a situação do contribuinte.
                     </h2>
                   </div>
 
@@ -339,24 +345,32 @@ export default function Home() {
                 exit={{ opacity: 0, scale: 0, x: 100 }}
                 transition={{ duration: 2 }}
               >
-                <div className="flex gap-2 bg-amber-600 h-40 p-2 rounded-r-4xl items-center">
-                  <div className="p-2  flex items-center">
-                    <h2>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Necessitatibus pariatur sunt, odit illum cupiditate voluptate
+                <div
+                  style={{ backgroundColor: `rgba(62, 62, 60, 0.5)`, borderRadius: 20 }}
+                  className="flex flex-col md:flex-row gap-2 h-auto p-2 rounded-l-4xl items-center"
+                >
+
+                  <div className="p-2 flex items-center">
+                    <h2 className="text-2xl">
+                      <span className="text-green-500 font-semibold">Data de Inicio: 17/03/2025 até 30/05/2025 não deixe para ultima hora</span>
+                      <span className="text-red-700 bg-black ml-3 pl-3 font-semibold tracking-wider">Cuidado com as consequencias das ultimas horas, pois pode ter multas se não conseguir</span>
                     </h2>
                   </div>
-                  <div className="bg-green-600 w-60 md:h-36 h-20 rounded-full"> </div>
+
+                  <Image src="/prazo.jpg" width={100} height={100} alt="" className="bg-green-600 w-36 md:h-36 h-20 rounded-full" />
+
                 </div>
+
               </motion.div>
 
             </div>
           </div>
+
         </div>
       </section>
 
       {/* sessão 3 */}
-      <section className="flex flex-col md:h-screen pt-10 items-center px-10 md:px-20 h-auto w-full bg-sky-600">
+      <section className="flex flex-col md:h-auto pt-10 items-center px-10 md:px-20 h-auto w-full bg-sky-600">
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -721,10 +735,10 @@ export default function Home() {
             whileInView={{ opacity: 1, scale: 1, x: 0 }}
             exit={{ opacity: 0, scale: 0, x: 100 }}
             transition={{ duration: 2 }}
+            className="box-item1 flex flex-1"
           >
-            <div className="box-item1  flex flex-1">
-              <Image src="/image-final.svg" width={400} height={100} alt="" />
-            </div>
+            <Image src="/image-final.svg" width={400} height={100} alt="" />
+
           </motion.div>
 
           <motion.div
