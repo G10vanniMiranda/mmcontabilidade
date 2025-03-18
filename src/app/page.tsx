@@ -218,7 +218,7 @@ export default function Home() {
       </section>
 
       {/* sessão 2 */}
-      <section className=" py-16 h-auto bg-blue-300">
+      <section className=" py-16 h-auto bg-sky-700">
         <div className="container mx-auto flex flex-col justify-center items-center px-10">
           <motion.div
             initial={{ opacity: 0, scale: 0 }}
@@ -356,30 +356,45 @@ export default function Home() {
       </section>
 
       {/* sessão 3 */}
-      <section className="flex flex-col md:h-screen pt-10 items-center px-10 md:px-20 h-auto w-full bg-blue-500">
-        <div
-          className="flex items-center gap-5 mb-10"
-          style={{
-            backgroundColor: `rgba(226, 207, 59, 0.2)`,
-            borderEndEndRadius: 20,
-            borderEndStartRadius: 20,
-            borderTopLeftRadius: 20,
-          }}
+      <section className="flex flex-col md:h-screen pt-10 items-center px-10 md:px-20 h-auto w-full bg-sky-600">
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0 }}
+          transition={{ duration: 2 }}
         >
-          <Image src="/logo-principal.svg" width={100} height={100} alt="" />
-          <h2 className="text-2xl font-semibold tracking-wider pr-7 text-white">
-            Nosso compromisso
-          </h2>
-        </div>
+          <div
+            className="flex items-center gap-5 mb-10"
+            style={{
+              backgroundColor: `rgba(226, 207, 59, 0.2)`,
+              borderEndEndRadius: 20,
+              borderEndStartRadius: 20,
+              borderTopLeftRadius: 20,
+            }}
+          >
+            <Image src="/logo-principal.svg" width={100} height={100} alt="" />
+            <h2 className="text-2xl font-semibold tracking-wider pr-7 text-white">
+              Nosso compromisso
+            </h2>
+          </div>
+        </motion.div>
 
         <div className="flex items-start">
-          <Image
-            src="/sessao3.png"
-            width={900}
-            height={400}
-            alt=""
-            className="flex flex-1 h-[516px]"
-          />
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0, x: -100 }}
+            whileInView={{ opacity: 1, scale: 1, x: 0 }}
+            exit={{ opacity: 0, scale: 0, x: 100 }}
+            transition={{ duration: 2 }}
+          >
+            <Image
+              src="/sessao3.png"
+              width={900}
+              height={400}
+              alt=""
+              className="flex flex-1 h-[516px] rounded-2xl"
+            />
+          </motion.div>
 
           <div className="flex flex-col md:flex-1 w-full gap-10 justify-center pl-20">
             <Accordion
@@ -387,241 +402,351 @@ export default function Home() {
               collapsible
               className="md:w-[600px] w-full flex gap-10 flex-col justify-center items-center "
             >
-              <AccordionItem value="1" className="w-full md:pt-2 pt-16 ">
-                <AccordionTrigger
-                  className="text-2xl w-full px-10 flex items-center justify-start"
-                  style={{ backgroundColor: `rgba(219, 233, 212, 0.3)` }}
-                >
-                  <div className="p-2 border-r-4 border-dashed border-blue-500">
-                    {" "}
-                    <MdOutlineSupportAgent
-                      size={40}
-                      color="blue"
-                      className="mr-7"
-                    />{" "}
-                  </div>
-                  Contato
-                </AccordionTrigger>
-                <AccordionContent
-                  className="text-lg pl-2"
-                  style={{ backgroundColor: `#ebf0e94c` }}
-                >
-                  Você entra em contato e nos envia seus documentos.
-                </AccordionContent>
-              </AccordionItem>
 
-              <AccordionItem value="item-2" className="w-full md:pt-2 pt-16">
-                <AccordionTrigger
-                  className="text-2xl px-10 flex items-center justify-start"
-                  style={{ backgroundColor: `rgba(219, 233, 212, 0.3)` }}
-                >
-                  <div className="p-2 border-r-4 border-dashed border-blue-500">
-                    {" "}
-                    <Image
-                      src="/card-target.png"
-                      width={40}
-                      height={40}
-                      alt=""
-                      className="mr-7"
-                    />{" "}
-                  </div>
-                  Análise
-                </AccordionTrigger>
-                <AccordionContent
-                  className="text-lg pl-2"
-                  style={{ backgroundColor: `#ebf0e94c` }}
-                >
-                  Nossa equipe analisa e prepara sua declaração em tempo
-                  recorde.
-                </AccordionContent>
-              </AccordionItem>
+              <motion.div
+                initial={{ opacity: 0, scale: 0, x: -100 }}
+                whileInView={{ opacity: 1, scale: 1, x: 0 }}
+                exit={{ opacity: 0, scale: 0, x: 100 }}
+                transition={{ duration: 2 }}
+                className="w-full md:pt-2 pt-16 "
+              >
+                <AccordionItem value="1" >
+                  <AccordionTrigger
+                    className="text-2xl w-full px-10 flex items-center justify-start"
+                    style={{ backgroundColor: `rgba(219, 233, 212, 0.3)` }}
+                  >
+                    <div className="p-2 border-r-4 border-dashed border-blue-500">
+                      {" "}
+                      <MdOutlineSupportAgent
+                        size={40}
+                        color="blue"
+                        className="mr-7"
+                      />{" "}
+                    </div>
+                    Contato
+                  </AccordionTrigger>
 
-              <AccordionItem value="item-3" className="w-full md:pt-2 pt-16">
-                <AccordionTrigger
-                  className="text-2xl px-10  flex items-center justify-start"
-                  style={{ backgroundColor: `rgba(219, 233, 212, 0.3)` }}
-                >
-                  <div className="p-2 border-r-4 border-dashed border-blue-500">
-                    {" "}
-                    <Image
-                      src="/card-edit.png"
-                      width={40}
-                      height={40}
-                      alt=""
-                      className="mr-7"
-                    />{" "}
-                  </div>
-                  Conferência
-                </AccordionTrigger>
-                <AccordionContent
-                  className="text-lg pl-2"
-                  style={{ backgroundColor: `#ebf0e94c` }}
-                >
-                  Revisamos todos os detalhes para garantir precisão.
-                </AccordionContent>
-              </AccordionItem>
+                  <AccordionContent
+                    className="text-lg pl-2"
+                    style={{ backgroundColor: `#ebf0e94c` }}
+                  >
+                    Você entra em contato e nos envia seus documentos.
+                  </AccordionContent>
+                </AccordionItem>
+              </motion.div>
 
-              <AccordionItem
-                value="item-4"
+              <motion.div
+                initial={{ opacity: 0, scale: 0, x: 100 }}
+                whileInView={{ opacity: 1, scale: 1, x: 0 }}
+                exit={{ opacity: 0, scale: 0, x: -100 }}
+                transition={{ duration: 2 }}
+                className="w-full md:pt-2 pt-16 "
+              >
+                <AccordionItem value="item-2">
+                  <AccordionTrigger
+                    className="text-2xl px-10 flex items-center justify-start"
+                    style={{ backgroundColor: `rgba(219, 233, 212, 0.3)` }}
+                  >
+                    <div className="p-2 border-r-4 border-dashed border-blue-500">
+                      {" "}
+                      <Image
+                        src="/card-target.png"
+                        width={40}
+                        height={40}
+                        alt=""
+                        className="mr-7"
+                      />{" "}
+                    </div>
+                    Análise
+                  </AccordionTrigger>
+
+                  <AccordionContent
+                    className="text-lg pl-2"
+                    style={{ backgroundColor: `#ebf0e94c` }}
+                  >
+                    Nossa equipe analisa e prepara sua declaração em tempo
+                    recorde.
+                  </AccordionContent>
+                </AccordionItem>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0, x: -100 }}
+                whileInView={{ opacity: 1, scale: 1, x: 0 }}
+                exit={{ opacity: 0, scale: 0, x: 100 }}
+                transition={{ duration: 2 }}
+                className="w-full md:pt-2 pt-16 "
+              >
+                <AccordionItem value="item-3" >
+                  <AccordionTrigger
+                    className="text-2xl px-10  flex items-center justify-start"
+                    style={{ backgroundColor: `rgba(219, 233, 212, 0.3)` }}
+                  >
+                    <div className="p-2 border-r-4 border-dashed border-blue-500">
+                      {" "}
+                      <Image
+                        src="/card-edit.png"
+                        width={40}
+                        height={40}
+                        alt=""
+                        className="mr-7"
+                      />{" "}
+                    </div>
+                    Conferência
+                  </AccordionTrigger>
+
+                  <AccordionContent
+                    className="text-lg pl-2"
+                    style={{ backgroundColor: `#ebf0e94c` }}
+                  >
+                    Revisamos todos os detalhes para garantir precisão.
+                  </AccordionContent>
+                </AccordionItem>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0, x: 100 }}
+                whileInView={{ opacity: 1, scale: 1, x: 0 }}
+                exit={{ opacity: 0, scale: 0, x: -100 }}
+                transition={{ duration: 2 }}
                 className="w-full md:pt-2 pt-16 pb-20"
               >
-                <AccordionTrigger
-                  className="text-2xl px-10 flex items-center justify-start"
-                  style={{ backgroundColor: `rgba(219, 233, 212, 0.3)` }}
-                >
-                  <div className="p-2 border-r-4 border-dashed border-blue-500">
-                    {" "}
-                    <Image
-                      src="/card-flash.png"
-                      width={40}
-                      height={40}
-                      alt=""
-                      className="mr-7"
-                    />{" "}
-                  </div>
-                  Envio
-                </AccordionTrigger>
-                <AccordionContent
-                  className="text-lg pl-2"
-                  style={{ backgroundColor: `#ebf0e94c` }}
-                >
-                  Enviamos para a Receita Federal e você recebe o comprovante.
-                </AccordionContent>
-              </AccordionItem>
+                <AccordionItem value="item-4" >
+                  <AccordionTrigger
+                    className="text-2xl px-10 flex items-center justify-start"
+                    style={{ backgroundColor: `rgba(219, 233, 212, 0.3)` }}
+                  >
+                    <div className="p-2 border-r-4 border-dashed border-blue-500">
+                      {" "}
+                      <Image
+                        src="/card-flash.png"
+                        width={40}
+                        height={40}
+                        alt=""
+                        className="mr-7"
+                      />{" "}
+                    </div>
+                    Envio
+                  </AccordionTrigger>
+
+                  <AccordionContent
+                    className="text-lg pl-2"
+                    style={{ backgroundColor: `#ebf0e94c` }}
+                  >
+                    Enviamos para a Receita Federal e você recebe o comprovante.
+                  </AccordionContent>
+                </AccordionItem>
+              </motion.div>
+
             </Accordion>
           </div>
+
         </div>
       </section>
 
       {/* sessão 4 MELHOR */}
-      <section className="flex flex-col md:pt-10 items-center px-10 md:px-20 md:h-screen h-auto w-screen bg-blue-300">
-        <div
-          className="flex items-center gap-5 mb-10"
-          style={{
-            backgroundColor: `rgba(226, 207, 59, 0.2)`,
-            borderEndEndRadius: 20,
-            borderEndStartRadius: 20,
-            borderTopLeftRadius: 20,
-          }}
+      <section className="flex flex-col md:pt-10 items-center px-10 md:px-20 md:h-screen h-auto w-screen bg-sky-500">
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0 }}
+          transition={{ duration: 2 }}
         >
-          <Image src="/logo-principal.svg" width={100} height={100} alt="" />
-          <h2 className="text-2xl font-semibold tracking-wider pr-7">
-            Soluções Serviços
-          </h2>
-        </div>
+          <div
+            className="flex items-center gap-5 mb-10"
+            style={{
+              backgroundColor: `rgba(226, 207, 59, 0.2)`,
+              borderEndEndRadius: 20,
+              borderEndStartRadius: 20,
+              borderTopLeftRadius: 20,
+            }}
+          >
+            <Image src="/logo-principal.svg" width={100} height={100} alt="" />
+            <h2 className="text-2xl font-semibold tracking-wider pr-7">
+              Soluções Serviços
+            </h2>
+          </div>
+        </motion.div>
 
         <div className="flex gap-10 mt-10 mb-10 flex-col md:flex-row">
           <div className="box-item flex flex-col gap-10 ">
             {/* item-01 */}
-            <div className="box-item flex justify-start items-center h-16">
-              <div className="box-icon bg-blue-700 p-2 w-16 rounded-l-xl h-16 flex items-center">
-                <Image
-                  src="/item-01.svg"
-                  width={50}
-                  height={50}
-                  alt=""
-                  className=""
-                />
+            <motion.div
+              initial={{ opacity: 0, scale: 0, x: -100 }}
+              whileInView={{ opacity: 1, scale: 1, x: 0 }}
+              exit={{ opacity: 0, scale: 0, x: 100 }}
+              transition={{ duration: 2 }}
+              className="w-full md:pt-2 pt-16 "
+            >
+              <div className="box-item flex justify-start items-center h-16">
+                <div className="box-icon bg-blue-700 p-2 w-16 rounded-l-xl h-16 flex items-center">
+                  <Image
+                    src="/item-01.svg"
+                    width={50}
+                    height={50}
+                    alt=""
+                    className=""
+                  />
+                </div>
+                <div className="box-body bg-blue-400 p-2 w-full rounded-r-xl h-16 flex items-center">
+                  Declaração 100% correta e sem riscos com profissionais
+                  experiêntes.
+                </div>
               </div>
-              <div className="box-body bg-blue-400 p-2 w-full rounded-r-xl h-16 flex items-center">
-                Declaração 100% correta e sem riscos com profissionais
-                experiêntes.
-              </div>
-            </div>
+            </motion.div>
 
             {/* item-02 */}
-            <div className="box-item flex justify-start items-center h-16">
-              <div className="box-icon bg-blue-700 p-2 w-16 rounded-l-xl h-16 flex items-center">
-                <Image
-                  src="/item-02.svg"
-                  width={50}
-                  height={50}
-                  alt=""
-                  className=""
-                />
+            <motion.div
+              initial={{ opacity: 0, scale: 0, x: 100 }}
+              whileInView={{ opacity: 1, scale: 1, x: 0 }}
+              exit={{ opacity: 0, scale: 0, x: -100 }}
+              transition={{ duration: 2 }}
+              className="w-full md:pt-2 pt-16 "
+            >
+              <div className="box-item flex justify-start items-center h-16">
+                <div className="box-icon bg-blue-700 p-2 w-16 rounded-l-xl h-16 flex items-center">
+                  <Image
+                    src="/item-02.svg"
+                    width={50}
+                    height={50}
+                    alt=""
+                    className=""
+                  />
+                </div>
+                <div className="box-body bg-blue-400 p-2 w-full rounded-r-xl h-16 flex items-center">
+                  Atendimento rápido e personalizado de acordo com a necessidade
+                  de cada cliente
+                </div>
               </div>
-              <div className="box-body bg-blue-400 p-2 w-full rounded-r-xl h-16 flex items-center">
-                Atendimento rápido e personalizado de acordo com a necessidade
-                de cada cliente
-              </div>
-            </div>
+            </motion.div>
 
             {/* item-03 */}
-            <div className="box-item flex justify-start items-center h-16">
-              <div className="box-icon bg-blue-700 p-2 w-16 rounded-l-xl h-16 flex items-center">
-                <Image
-                  src="/item-03.svg"
-                  width={50}
-                  height={50}
-                  alt=""
-                  className=""
-                />
+            <motion.div
+              initial={{ opacity: 0, scale: 0, x: -100 }}
+              whileInView={{ opacity: 1, scale: 1, x: 0 }}
+              exit={{ opacity: 0, scale: 0, x: 100 }}
+              transition={{ duration: 2 }}
+              className="w-full md:pt-2 pt-16 "
+            >
+              <div className="box-item flex justify-start items-center h-16">
+                <div className="box-icon bg-blue-700 p-2 w-16 rounded-l-xl h-16 flex items-center">
+                  <Image
+                    src="/item-03.svg"
+                    width={50}
+                    height={50}
+                    alt=""
+                    className=""
+                  />
+                </div>
+                <div className="box-body bg-blue-400 p-2 w-full rounded-r-xl h-16 flex items-center">
+                  Declaração 100% correta e sem riscos com profissionais
+                  experiêntes.
+                </div>
               </div>
-              <div className="box-body bg-blue-400 p-2 w-full rounded-r-xl h-16 flex items-center">
-                Declaração 100% correta e sem riscos com profissionais
-                experiêntes.
-              </div>
-            </div>
+            </motion.div>
 
             {/* item-04 */}
-            <div className="box-item flex justify-start items-center h-16 mb-10">
-              <div className="box-icon bg-blue-700 p-2 w-16 rounded-l-xl h-16 flex items-center">
-                <Image
-                  src="/item-04.svg"
-                  width={50}
-                  height={50}
-                  alt=""
-                  className=""
-                />
+            <motion.div
+              initial={{ opacity: 0, scale: 0, x: 100 }}
+              whileInView={{ opacity: 1, scale: 1, x: 0 }}
+              exit={{ opacity: 0, scale: 0, x: -100 }}
+              transition={{ duration: 2 }}
+              className="w-full md:pt-2 pt-16 "
+            >
+              <div className="box-item flex justify-start items-center h-16 mb-10">
+                <div className="box-icon bg-blue-700 p-2 w-16 rounded-l-xl h-16 flex items-center">
+                  <Image
+                    src="/item-04.svg"
+                    width={50}
+                    height={50}
+                    alt=""
+                    className=""
+                  />
+                </div>
+                <div className="box-body bg-blue-400 p-2 w-full rounded-r-xl h-16 flex items-center">
+                  Declaração 100% correta e sem riscos com profissionais
+                  experiêntes.
+                </div>
               </div>
-              <div className="box-body bg-blue-400 p-2 w-full rounded-r-xl h-16 flex items-center">
-                Declaração 100% correta e sem riscos com profissionais
-                experiêntes.
-              </div>
-            </div>
+            </motion.div>
           </div>
 
-          <Image
-            src="/sessao4.png"
-            width={900}
-            height={400}
-            alt=""
-            className="flex flex-1 md:h-[380px] mb-10 rounded-tl-4xl rounded-br-4xl"
-          />
+          <motion.div
+            initial={{ opacity: 0, scale: 0, x: 100 }}
+            whileInView={{ opacity: 1, scale: 1, x: 0 }}
+            exit={{ opacity: 0, scale: 0, x: -100 }}
+            transition={{ duration: 2 }}
+            className="w-full md:pt-2 pt-16 "
+          >
+            <Image
+              src="/sessao4.png"
+              width={900}
+              height={400}
+              alt=""
+              className="flex flex-1 md:h-[380px] mb-10 rounded-tl-4xl rounded-br-4xl"
+            />
+          </motion.div>
         </div>
-      </section>
+
+      </section >
 
       {/* sessão 5 MELHOR */}
-      <section className="flex flex-col pt-10 items-center px-10 md:px-20 h-auto w-screen bg-blue-500 pb-10">
-        <div
-          className="flex items-center gap-5 mb-10"
-          style={{
-            backgroundColor: `rgba(226, 207, 59, 0.2)`,
-            borderEndEndRadius: 20,
-            borderEndStartRadius: 20,
-            borderTopLeftRadius: 20,
-          }}
+      < section className="flex flex-col pt-10 items-center px-10 md:px-20 h-auto w-screen bg-sky-400 pb-10" >
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0 }}
+          transition={{ duration: 2 }}
         >
-          <Image src="/logo-principal.svg" width={100} height={100} alt="" />
-          <h2 className="text-2xl font-semibold tracking-wider pr-7">
-            Benefícios do Serviço
-          </h2>
-        </div>
+          <div
+            className="flex items-center gap-5 mb-10"
+            style={{
+              backgroundColor: `rgba(226, 207, 59, 0.2)`,
+              borderEndEndRadius: 20,
+              borderEndStartRadius: 20,
+              borderTopLeftRadius: 20,
+            }}
+          >
+            <Image src="/logo-principal.svg" width={100} height={100} alt="" />
+            <h2 className="text-2xl font-semibold tracking-wider pr-7">
+              Entre em contato!
+            </h2>
+          </div>
+        </motion.div>
 
         <div className="flex flex-col md:flex-row gap-10 mb-5 ">
-          <div className="box-item1  flex flex-1">
-            <Image src="/image-final.svg" width={400} height={100} alt="" />
-          </div>
-          <div className="box-item2 flex flex-1 flex-col justify-around items-center md:text-3xl text-2xl text-center bg-white px-2 rounded-l-4xl">
-            <h3 className="border-b-4">📲  Não corra Riscos!</h3>
-            <h3 className="py-3"> 📲  Entre em contato agora e faça sua declaração com segurança! </h3>
-            <div> 📲 Clique no botão abaixo e fale com um especialista!
-              <div className="flex animate-bounce md:ml-0 ml-28">👇</div>
+          <motion.div
+            initial={{ opacity: 0, scale: 0, x: -100 }}
+            whileInView={{ opacity: 1, scale: 1, x: 0 }}
+            exit={{ opacity: 0, scale: 0, x: 100 }}
+            transition={{ duration: 2 }}
+          >
+            <div className="box-item1  flex flex-1">
+              <Image src="/image-final.svg" width={400} height={100} alt="" />
             </div>
-          </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0, x: 100 }}
+            whileInView={{ opacity: 1, scale: 1, x: 0 }}
+            exit={{ opacity: 0, scale: 0, x: -100 }}
+            transition={{ duration: 2 }}
+            className="box-item2 flex flex-1 flex-col justify-around items-center md:text-3xl text-2xl text-center bg-white px-2 rounded-l-4xl"
+          >
+            <div >
+              <h3 className="border-b-4">📲  Não corra Riscos!</h3>
+              <h3 className="py-3"> 📲  Entre em contato agora e faça sua declaração com segurança! </h3>
+              <div> 📲 Clique no botão abaixo e fale com um especialista!
+                <div className="flex animate-bounce md:ml-0 ml-28">👇</div>
+              </div>
+            </div>
+          </motion.div>
         </div>
+
         <ZapBtn />
-      </section>
-    </div>
+
+      </section >
+    </div >
   );
 }
