@@ -79,141 +79,166 @@ export default function Home() {
     <div>
       {/* sessão 1 vamos melhorar */}
       <section
-        className="flex flex-col justify-around items-center px-10 md:px-20 h-screen w-screen"
-        style={{
-          backgroundImage: `url(./sessao1.png)`,
-          width: "100",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-        }}
+        className="flex bg-slate-900 flex-col justify-around items-center px-10 md:px-20 h-screen w-screen"
+      // style={{
+      //   backgroundImage: `url(./sessao1.png)`,
+      //   width: "100",
+      //   backgroundRepeat: "no-repeat",
+      //   backgroundSize: "cover",
+      // }}
       >
         {/* Logo */}
         <motion.div
-          initial={{ opacity: 0, scale: 0 }}
-          whileInView={{ opacity: 1, scale: 1 }}
+          initial={{ y: -100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
           exit={{ opacity: 0, scale: 0 }}
           transition={{ duration: 2 }}
         >
           <Image src="/logo-principal.svg" width={100} height={100} alt="" />
         </motion.div>
 
-        {/* Sesão 1 item 1 */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0, x: -100 }}
-          whileInView={{ opacity: 1, scale: 1, x: 0 }}
-          exit={{ opacity: 0, scale: 0, x: 100 }}
-          transition={{ duration: 2 }}
-        >
-          <div
-            className="flex items-center md:w-[650px]"
-            style={{
-              backgroundColor: `rgba(62, 62, 60, 0.5) `,
-              borderRadius: 20,
-            }}
-          >
-            <Image
-              src="/imposto.png"
-              width={200}
-              height={100}
-              alt=""
-              className="rounded-l-2xl w-24 h-24"
-            />
-            <h2 className="p-5 md:text-2xl text-xl text-green-500 tracking-wider font-semibold text-center">
-              Precisa declarar seu imposto de renda?
-            </h2>
-          </div>
-        </motion.div>
+        <div className="flex flex-row w-full h-auto md:h-[600px]">
 
-        {/* Sesão 1 item 2 */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0, x: 100 }}
-          whileInView={{ opacity: 1, scale: 1, x: 0 }}
-          exit={{ opacity: 0, scale: 0, x: -100 }}
-          transition={{ duration: 2 }}
-        >
-          <div
-            className="flex items-center md:w-[650px]"
-            style={{
-              backgroundColor: `rgba(62, 62, 60, 0.5) `,
-              borderRadius: 20,
-            }}
-          >
-            <Image
-              src="/multa.png"
-              width={200}
-              height={100}
-              alt=""
-              className="rounded-l-2xl w-24 h-24"
-            />
-            <h2 className="p-5 md:text-2xl text-xl text-green-500 tracking-wider font-semibold text-center">
-              Evite multas! Deixe com um especialistas.
-            </h2>
-          </div>
-        </motion.div>
+          {/* Calendario */}
+          <div className="flex-1 flex items-center justify-center">
 
-        {/* Sesão 1 item 3 */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0, x: -100 }}
-          whileInView={{ opacity: 1, scale: 1, x: 0 }}
-          exit={{ opacity: 0, scale: 0, x: 100 }}
-          transition={{ duration: 2 }}
-        >
-          <div
-            className="flex items-center md:w-[650px]"
-            style={{
-              backgroundColor: `rgba(62, 62, 60, 0.5) `,
-              borderRadius: 20,
-            }}
-          >
-            <Image
-              src="/hora.png"
-              width={200}
-              height={100}
-              alt=""
-              className="rounded-l-2xl w-24 h-24"
-            />
-            <h2 className="p-5 md:text-2xl text-xl text-green-500 tracking-wider font-semibold text-center">
-              Não deixe para última hora.
-            </h2>
-          </div>
-        </motion.div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0, x: -100 }}
+              whileInView={{ opacity: 1, scale: 1.1, x: 0 }}
+              exit={{ opacity: 0, scale: 0, x: 100 }}
+              transition={{ duration: 2 }}
+            >
 
-        {/* Sesão 1 item 4 */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0, x: 100 }}
-          whileInView={{ opacity: 1, scale: 1, x: 0 }}
-          exit={{ opacity: 0, scale: 0, x: -100 }}
-          transition={{ duration: 2 }}
-        >
-          <div
-            className="flex items-center md:w-[650px]"
-            style={{
-              backgroundColor: `rgba(62, 62, 60, 0.5) `,
-              borderRadius: 20,
-            }}
-          >
-            <Image
-              src="/equipe.png"
-              width={200}
-              height={100}
-              alt=""
-              className="rounded-l-2xl w-24 h-24"
-            />
-            <h2 className="p-5 md:text-2xl text-xl text-green-500 tracking-wider font-semibold text-center">
-              Nossa equipe esta preparada.
-            </h2>
-          </div>
-        </motion.div>
+              <Image className="w-72 rotate-12 rounded-xl z-0 mb-24"
+                width={200} height={200} src="/inicio.png" alt={""} />
+            </motion.div>
 
-        {/* Btn Whats */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0, y: 100 }}
-          whileInView={{ opacity: 1, scale: 1, y: 0 }}
-          exit={{ opacity: 0, scale: 0, y: -100 }}
-          transition={{ duration: 2 }}
-        >
-          <ZapBtn />
-        </motion.div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0, x: -100 }}
+              whileInView={{ opacity: 1, scale: 1.27, x: 0 }}
+              exit={{ opacity: 0, scale: 0, x: 100 }}
+              transition={{ duration: 1 }}
+            >
+              <Image className="w-72 rotate-12 rounded-xl z-10 -ml-10 mt-20 animate-pulse"
+                width={200} height={200} src="/final.png" alt={""} />
+            </motion.div>
+
+          </div>
+
+          {/* Itens */}
+          <div className="flex-1 bg flex gap-12 flex-col">
+
+            {/* Sesão 1 item 1 */}
+            <motion.div
+              initial={{ x: 200, opacity: 0, }}
+              whileInView={{ x: 0, opacity: 1, }}
+              exit={{ x: -200, opacity: 0, }}
+              transition={{ duration: 1 }}
+            >
+              <div
+                className="flex items-center md:w-[650px]"
+                style={{
+                  backgroundColor: `rgba(62, 62, 60, 0.5) `,
+                  borderRadius: 20,
+                }}
+              >
+                <Image
+                  src="/imposto.png"
+                  width={200}
+                  height={100}
+                  alt=""
+                  className="rounded-l-2xl w-24 h-24"
+                />
+                <h2 className="p-5 md:text-2xl text-xl text-green-500 tracking-wider font-semibold text-center">
+                  Precisa declarar seu imposto de renda?
+                </h2>
+              </div>
+            </motion.div>
+
+            {/* Sesão 1 item 2 */}
+            <motion.div
+              initial={{ x: -200, opacity: 0, }}
+              whileInView={{ x: 0, opacity: 1, }}
+              exit={{ x: 200, opacity: 0, }}
+              transition={{ duration: 1.2 }}
+            >
+              <div
+                className="flex items-center md:w-[650px]"
+                style={{
+                  backgroundColor: `rgba(62, 62, 60, 0.5) `,
+                  borderRadius: 20,
+                }}
+              >
+                <Image
+                  src="/multa.png"
+                  width={200}
+                  height={100}
+                  alt=""
+                  className="rounded-l-2xl w-24 h-24"
+                />
+                <h2 className="p-5 md:text-2xl text-xl text-green-500 tracking-wider font-semibold text-center">
+                  Evite multas! Deixe com um especialistas.
+                </h2>
+              </div>
+            </motion.div>
+
+            {/* Sesão 1 item 3 */}
+            <motion.div
+              initial={{ x: 200, opacity: 0, }}
+              whileInView={{ x: 0, opacity: 1, }}
+              exit={{ x: -200, opacity: 0, }}
+              transition={{ duration: 1.4 }}
+            >
+              <div
+                className="flex items-center md:w-[650px]"
+                style={{
+                  backgroundColor: `rgba(62, 62, 60, 0.5) `,
+                  borderRadius: 20,
+                }}
+              >
+                <Image
+                  src="/hora.png"
+                  width={200}
+                  height={100}
+                  alt=""
+                  className="rounded-l-2xl w-24 h-24"
+                />
+                <h2 className="p-5 md:text-2xl text-xl text-green-500 tracking-wider font-semibold text-center">
+                  Não deixe para última hora.
+                </h2>
+              </div>
+            </motion.div>
+
+            {/* Sesão 1 item 4 */}
+            <motion.div
+              initial={{ x: -200, opacity: 0, }}
+              whileInView={{ x: 0, opacity: 1, }}
+              exit={{ x: 200, opacity: 0, }}
+              transition={{ duration: 1.6 }}
+            >
+              <div
+                className="flex items-center md:w-[650px]"
+                style={{
+                  backgroundColor: `rgba(62, 62, 60, 0.5) `,
+                  borderRadius: 20,
+                }}
+              >
+                <Image
+                  src="/equipe.png"
+                  width={200}
+                  height={100}
+                  alt=""
+                  className="rounded-l-2xl w-24 h-24"
+                />
+                <h2 className="p-5 md:text-2xl text-xl text-green-500 tracking-wider font-semibold text-center">
+                  Nossa equipe esta preparada.
+                </h2>
+              </div>
+            </motion.div>
+
+          </div>
+
+        </div>
 
       </section>
 
@@ -322,6 +347,7 @@ export default function Home() {
                 exit={{ opacity: 0, scale: 0, x: -100 }}
                 transition={{ duration: 2 }}
               >
+
                 <div
                   style={{ backgroundColor: `rgba(62, 62, 60, 0.5)`, borderRadius: 20 }}
                   className="flex flex-col md:flex-row gap-2 h-auto p-2 rounded-l-4xl items-center"
@@ -337,6 +363,7 @@ export default function Home() {
                   </div>
 
                 </div>
+
               </motion.div>
 
               <motion.div
@@ -345,6 +372,7 @@ export default function Home() {
                 exit={{ opacity: 0, scale: 0, x: 100 }}
                 transition={{ duration: 2 }}
               >
+
                 <div
                   style={{ backgroundColor: `rgba(62, 62, 60, 0.5)`, borderRadius: 20 }}
                   className="flex flex-col md:flex-row gap-2 h-auto p-2 rounded-l-4xl items-center"
