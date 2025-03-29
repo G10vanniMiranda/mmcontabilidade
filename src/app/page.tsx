@@ -72,7 +72,7 @@ export default function Home() {
       </section>
 
       {/* sessão 03 */}
-      <section className="h-auto w-screen flex flex-col items-center justify-center">
+      <section className="h-auto w-screen flex flex-col items-center justify-center md:justify-between ">
 
         <div className="w-full h-96 flex justify-between">
 
@@ -82,7 +82,7 @@ export default function Home() {
 
         </div>
 
-        <div className="w-96 h-auto flex flex-col">
+        <div className="w-96 h-auto flex flex-col md:w-[600px]">
           <div className="flex items-center justify-center gap-4 p-4">
             <div>
               <Image src="/atencao.png" alt="Atenção" width={100} height={100} />
@@ -146,6 +146,21 @@ export default function Home() {
 
         <div className="mt-4">
           <Image src="/calculadora1.png" alt="Calculadora com grafico" width={200} height={100} />
+        </div>
+
+      </section>
+
+      {/* sessão 04 */}
+      <section className="h-screen w-screen flex items-center justify-center 
+      bg-[url(/busines.png)] md:bg-[url(/#.png)]  bg-cover bg-center">
+
+        <div className="flex flex-col">
+          <div className="flex">
+            Como funciona?
+          </div>
+          <div className="flex">
+            Segurança e sigilo total das suas informações
+          </div>
         </div>
 
       </section>
