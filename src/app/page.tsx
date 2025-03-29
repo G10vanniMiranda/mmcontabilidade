@@ -151,19 +151,92 @@ export default function Home() {
       </section>
 
       {/* sessão 04 */}
-      <section className="h-screen w-screen flex items-center justify-center 
-      bg-[url(/busines.png)] md:bg-[url(/#.png)]  bg-cover bg-center">
+      <section className="h-screen w-screen flex flex-col items-center justify-center gap-4
+      bg-[url(/busines.png)] md:bg-[url(/#.png)] bg-cover bg-center">
 
-        <div className="flex flex-col">
-          <div className="flex">
-            Como funciona?
+        <div className="flex flex-col items-center justify-center">
+
+          <div className="flex items-center justify-center gap-4">
+
+            <div>
+              <Image src="/dev.png" alt="Desenvolvedor" width={50} height={100} />
+            </div>
+
+            <div>
+              <h1 className="font-bold text-3xl">Como funciona?</h1>
+            </div>
+
           </div>
-          <div className="flex">
-            Segurança e sigilo total das suas informações
+
+          <div className="w-56 flex items-center justify-center gap-4">
+
+            <div>
+              <Image src="/cadeado.png" alt="Cadeado" width={50} height={100} />
+            </div>
+
+            <div>
+              <h1 className=""> Segurança e sigilo total das suas informações </h1>
+            </div>
+
           </div>
+
+        </div>
+
+        <div className="w-64 h-auto flex flex-col items-center justify-center gap-2">
+
+          <div className="flex items-center justify-center gap-4">
+            <div>
+              <p>#</p>
+            </div>
+
+            <div>
+              <h1 className="font-semibold text-2xl">Contato e envio</h1>
+
+              <h2>Você entra em contato e nos envia seus documentos.</h2>
+            </div>
+          </div>
+
+          <div className="flex items-center justify-center gap-4">
+            <div>
+              <p>#</p>
+            </div>
+
+            <div>
+              <h1 className="font-semibold text-2xl">Conferência</h1>
+
+              <h2>Revisamos todos os detalhes para garantir precisão.</h2>
+            </div>
+          </div>
+
+          <div className="flex items-center justify-center gap-4">
+            <div>
+              <p>#</p>
+            </div>
+
+            <div>
+              <h1 className="font-semibold text-2xl">Análise e Preparação</h1>
+
+              <h2>Nossa equipe analisa e prepara sua declaração.</h2>
+            </div>
+          </div>
+
+          <div className="flex items-center justify-center gap-4">
+            <div>
+              <p>#</p>
+            </div>
+
+            <div>
+              <h1 className="font-semibold text-2xl">Envio e Comprovante</h1>
+
+              <h2>Enviamos para a Receita Federal e você recebe o comprovante.</h2>
+            </div>
+          </div>
+
         </div>
 
       </section>
+
+      {/* sessão 05 */}
     </div>
   );
 }
