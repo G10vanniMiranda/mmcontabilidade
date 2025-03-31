@@ -182,11 +182,11 @@ export default function Home() {
 
         </div>
 
-        <div className="w-64 h-auto flex flex-col items-center justify-center gap-2">
+        <div className="w-72 h-auto flex flex-col items-center justify-center gap-2">
 
           <div className="flex items-center justify-center gap-4">
             <div>
-              <p>#</p>
+              <Image src="/confirm.png" alt="Confirmação" width={50} height={100} />
             </div>
 
             <div>
@@ -198,7 +198,7 @@ export default function Home() {
 
           <div className="flex items-center justify-center gap-4">
             <div>
-              <p>#</p>
+              <Image src="/confirm.png" alt="Confirmação" width={50} height={100} />
             </div>
 
             <div>
@@ -210,7 +210,7 @@ export default function Home() {
 
           <div className="flex items-center justify-center gap-4">
             <div>
-              <p>#</p>
+              <Image src="/confirm.png" alt="Confirmação" width={50} height={100} />
             </div>
 
             <div>
@@ -222,7 +222,7 @@ export default function Home() {
 
           <div className="flex items-center justify-center gap-4">
             <div>
-              <p>#</p>
+              <Image src="/confirm.png" alt="Confirmação" width={50} height={100} />
             </div>
 
             <div>
@@ -237,6 +237,32 @@ export default function Home() {
       </section>
 
       {/* sessão 05 */}
+      <section className="h-screen w-screen flex flex-col items-center justify-center gap-4
+      bg-[url(/mulher-sessao5.png)] md:bg-[url(/#.png)] bg-cover bg-center">
+
+
+        <div className="w-80 flex items-center justify-center gap-4">
+
+          <Image src="/comprimento.png" alt="Comfirmação" width={50} height={100} />
+
+          <h1 className="font-bold text-3xl">Por que <br /> nos escolher?</h1>
+
+        </div>
+
+        <div className="flex flex-col items-center justify-center gap-4">
+
+          <div className="bg-red-500 flex items-center justify-center gap-4">
+
+            <Image src="/confirm.png" alt="Check" width={50} height={100} />
+
+            <h1 className="font-semibold">Declaração 100% <br /> correta e sem riscos </h1>
+
+          </div>
+
+        </div>
+
+      </section>
+
     </div>
   );
 }
