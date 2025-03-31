@@ -237,7 +237,7 @@ export default function Home() {
       </section>
 
       {/* sessão 05 */}
-      <section className="h-screen w-screen flex flex-col items-center justify-center gap-4
+      <section className="h-screen w-screen flex flex-col items-center justify-center gap-8
       bg-[url(/mulher-sessao5.png)] md:bg-[url(/#.png)] bg-cover bg-center">
 
 
@@ -249,16 +249,95 @@ export default function Home() {
 
         </div>
 
-        <div className="flex flex-col items-center justify-center gap-4">
+        <div className="w-80 h-auto flex flex-col gap-4">
 
-          <div className="bg-red-500 flex items-center justify-center gap-4">
+          <div className="w-auto flex items-center gap-4">
 
-            <Image src="/confirm.png" alt="Check" width={50} height={100} />
+            <div>
+              <Image src="/confirm.png" alt="Check" width={50} height={100} />
+            </div>
 
-            <h1 className="font-semibold">Declaração 100% <br /> correta e sem riscos </h1>
+            <h1 className="font-semibold spaced-text">Declaração 100% <br /> correta e sem riscos </h1>
 
           </div>
 
+          <div className="flex items-center gap-4">
+
+            <div>
+              <Image src="/confirm.png" alt="Check" width={50} height={100} />
+            </div>
+
+            <h1 className="font-semibold spaced-text">Atendimento rápido e personalizado </h1>
+
+          </div>
+
+          <div className="flex items-center gap-4">
+
+            <div>
+              <Image src="/confirm.png" alt="Check" width={50} height={100} />
+            </div>
+
+            <h1 className="font-semibold spaced-text">Análise detalhada para garantir restituição máxima </h1>
+
+          </div>
+
+          <div className="flex items-center gap-4">
+
+            <div>
+              <Image src="/confirm.png" alt="Check" width={50} height={100} />
+            </div>
+
+            <h1 className="font-semibold spaced-text">Suporte completo em caso de dúvidas </h1>
+
+          </div>
+
+          <div className="flex items-center gap-4">
+
+            <div>
+              <Image src="/confirm.png" alt="Check" width={50} height={100} />
+            </div>
+
+            <h1 className="font-semibold spaced-text">Segurança e sigilo total das suas informações </h1>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* sessão 06 */}
+      <section className="h-screen w-screen flex flex-col items-center justify-center gap-4
+      bg-[url(/mulher-sessao6.png)] md:bg-[url(/#.png)] bg-cover bg-center">
+
+        <div className="">
+          <Image src="/confirm.png" alt="Check" width={50} height={100} />
+        </div>
+
+        <div>
+
+          <div>
+            <h1>Declare seu Imposto de Renda</h1>
+          </div>
+
+          <div>
+            <h2>Com segurança e sem riscos.</h2>
+          </div>
+
+        </div>
+
+        <div>
+
+          <h1>Entre em contato agora e deixe seu Imposto de Renda nas mãos de especialistas.</h1>
+
+        </div>
+
+        <button className="bg-green-500 md:w-[250px] md:ml-8 flex items-center justify-center gap-1 p-2 text-white rounded-md">
+          <FaWhatsapp />
+          Entrar em contato
+        </button>
+
+        <div>
+          <Image src="/#.png" alt="Grafico" width={100} height={24} />
         </div>
 
       </section>
