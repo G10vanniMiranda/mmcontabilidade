@@ -7,18 +7,19 @@ import { FaWhatsapp } from "react-icons/fa";
 export default function Home() {
   return (
     <div>
+
       {/* sessão 01 */}
-      <section className="h-screen w-screen flex items-center justify-center 
-      bg-[url(/infopage.png)] md:bg-[url(/infopage-mobile.png)]  bg-cover bg-center">
+      <section className="h-screen w-screen z-0 flex items-center justify-center
+      bg-[url(/infopage-mobile.png)] md:bg-[url(/infopage-desktop.png)] bg-cover bg-center">
 
-        <div className="flex flex-col gap-4 max-w-72 absolute bottom-36">
+        <div className="flex flex-col gap-2 max-w-72 absolute md:bottom-28 bottom-26">
 
-          <Image src="/logo.png" alt="Logo MM" width={100} height={24} />
+          <Image src="/logo.png" alt="Logo MM" width={500} height={24} className="w-52 " />
 
-          <h1 className="text-4xl font-semibold">Precisando declarar seu Imposto de Renda?</h1>
+          <h1 className="text-5xl font-bold">Precisando declarar seu Imposto de Renda?</h1>
 
-          <div className="w-40">
-            <h2 className="text-blue-500">Nós Cuidamos de Tudo Para Você!</h2>
+          <div className="w-64">
+            <h2 className="text-blue-500 text-[26px] font-medium">Nós Cuidamos de Tudo Para Você!</h2>
           </div>
 
         </div>
@@ -27,14 +28,12 @@ export default function Home() {
 
       {/* sessão 02 */}
       <section className="h-screen w-screen flex items-center justify-center relative
-      bg-[url(/sessao2.png)] md:bg-[url(/sessao2-desk.png)] bg-cover bg-center">
+      bg-[url(/sessao2.png)] md:bg-[url(/sessao2-desk.png)]">
 
-        <div className=" w-screen h-auto flex flex-col 
-          md:flex-row items-center 
-          justify-center md:justify-start gap-6 
-          p-8 mb-36 ">
+        <div className=" w-screen h-auto flex flex-col md:flex-row items-center 
+          justify-center md:justify-start gap-6 p-8 mb-36 ">
 
-          <Image className="w-full md:ml-10 md:w-96 h-[50vh]" src="/mulher-sessao2.png" alt="Mulher com a mão na cabeça" width={700} height={100} />
+          <Image className=" md:mt-0 mt-60 md:ml-10 w-full md:w-96 h-[50vh] " src="/mulher-sessao2.png" alt="Mulher com a mão na cabeça" width={700} height={100} />
 
           <div className="flex flex-col gap-6 md:w-[400px]">
 
@@ -151,14 +150,14 @@ export default function Home() {
       </section>
 
       {/* sessão 04 */}
-      <section className="h-screen w-screen flex flex-col items-center justify-center gap-4
+      <section className="h-screen w-screen flex flex-col items-center justify-center gap-4 pt-96
       bg-[url(/busines.png)] md:bg-[url(/#.png)] bg-cover bg-center">
 
         <div className="flex flex-col items-center justify-center">
 
           <div className="flex items-center justify-center gap-4">
 
-            <div>
+            <div className="w-11">
               <Image src="/dev.png" alt="Desenvolvedor" width={50} height={100} />
             </div>
 
@@ -170,7 +169,7 @@ export default function Home() {
 
           <div className="w-56 flex items-center justify-center gap-4">
 
-            <div>
+            <div className="w-11">
               <Image src="/cadeado.png" alt="Cadeado" width={50} height={100} />
             </div>
 
@@ -185,11 +184,11 @@ export default function Home() {
         <div className="w-72 h-auto flex flex-col items-center justify-center gap-2">
 
           <div className="flex items-center justify-center gap-4">
-            <div>
+            <div className="w-11">
               <Image src="/confirm.png" alt="Confirmação" width={50} height={100} />
             </div>
 
-            <div>
+            <div className="w-64">
               <h1 className="font-semibold text-2xl">Contato e envio</h1>
 
               <h2>Você entra em contato e nos envia seus documentos.</h2>
@@ -197,11 +196,11 @@ export default function Home() {
           </div>
 
           <div className="flex items-center justify-center gap-4">
-            <div>
+            <div className="w-11">
               <Image src="/confirm.png" alt="Confirmação" width={50} height={100} />
             </div>
 
-            <div>
+            <div className="w-64">
               <h1 className="font-semibold text-2xl">Conferência</h1>
 
               <h2>Revisamos todos os detalhes para garantir precisão.</h2>
@@ -209,11 +208,11 @@ export default function Home() {
           </div>
 
           <div className="flex items-center justify-center gap-4">
-            <div>
+            <div className="w-11">
               <Image src="/confirm.png" alt="Confirmação" width={50} height={100} />
             </div>
 
-            <div>
+            <div className="w-64">
               <h1 className="font-semibold text-2xl">Análise e Preparação</h1>
 
               <h2>Nossa equipe analisa e prepara sua declaração.</h2>
@@ -221,11 +220,11 @@ export default function Home() {
           </div>
 
           <div className="flex items-center justify-center gap-4">
-            <div>
+            <div className="w-11">
               <Image src="/confirm.png" alt="Confirmação" width={50} height={100} />
             </div>
 
-            <div>
+            <div className="w-64">
               <h1 className="font-semibold text-2xl">Envio e Comprovante</h1>
 
               <h2>Enviamos para a Receita Federal e você recebe o comprovante.</h2>
@@ -237,7 +236,7 @@ export default function Home() {
       </section>
 
       {/* sessão 05 */}
-      <section className="h-screen w-screen flex flex-col items-center justify-center gap-8
+      <section className="h-screen w-screen flex flex-col items-center justify-center gap-8 pt-80
       bg-[url(/mulher-sessao5.png)] md:bg-[url(/#.png)] bg-cover bg-center">
 
 
@@ -249,55 +248,55 @@ export default function Home() {
 
         </div>
 
-        <div className="w-80 h-auto flex flex-col gap-4">
+        <div className="w-72 h-auto flex flex-col gap-4">
 
           <div className="w-auto flex items-center gap-4">
 
-            <div>
+            <div className="w-11">
               <Image src="/confirm.png" alt="Check" width={50} height={100} />
             </div>
 
-            <h1 className="font-semibold spaced-text">Declaração 100% <br /> correta e sem riscos </h1>
+            <h1 className="font-semibold spaced-text w-64">Declaração 100% <br /> correta e sem riscos </h1>
 
           </div>
 
           <div className="flex items-center gap-4">
 
-            <div>
+            <div className="w-11">
               <Image src="/confirm.png" alt="Check" width={50} height={100} />
             </div>
 
-            <h1 className="font-semibold spaced-text">Atendimento rápido e personalizado </h1>
+            <h1 className="font-semibold spaced-text w-64">Atendimento rápido e personalizado </h1>
 
           </div>
 
           <div className="flex items-center gap-4">
 
-            <div>
+            <div className="w-11">
               <Image src="/confirm.png" alt="Check" width={50} height={100} />
             </div>
 
-            <h1 className="font-semibold spaced-text">Análise detalhada para garantir restituição máxima </h1>
+            <h1 className="font-semibold spaced-text w-64">Análise detalhada para garantir restituição máxima </h1>
 
           </div>
 
           <div className="flex items-center gap-4">
 
-            <div>
+            <div className="w-11">
               <Image src="/confirm.png" alt="Check" width={50} height={100} />
             </div>
 
-            <h1 className="font-semibold spaced-text">Suporte completo em caso de dúvidas </h1>
+            <h1 className="font-semibold spaced-text w-64">Suporte completo em caso de dúvidas </h1>
 
           </div>
 
           <div className="flex items-center gap-4">
 
-            <div>
+            <div className="w-11">
               <Image src="/confirm.png" alt="Check" width={50} height={100} />
             </div>
 
-            <h1 className="font-semibold spaced-text">Segurança e sigilo total das suas informações </h1>
+            <h1 className="font-semibold spaced-text w-64">Segurança e sigilo total das suas informações </h1>
 
           </div>
 
@@ -306,38 +305,38 @@ export default function Home() {
       </section>
 
       {/* sessão 06 */}
-      <section className="h-screen w-screen flex flex-col items-center justify-center gap-4
-      bg-[url(/mulher-sessao6.png)] md:bg-[url(/#.png)] bg-cover bg-center">
+      <section className="h-auto w-screen flex flex-col items-center justify-center
+        bg-[url(/mulher-sessao6.png)] md:bg-[url(/#.png)] bg-cover bg-center">
 
-        <div className="">
-          <Image src="/confirm.png" alt="Check" width={50} height={100} />
+        <div className="w-full flex justify-end">
+          <Image src="/calculadora2.png" alt="Check" width={180} height={100} />
         </div>
 
-        <div>
+        <div className="w-full flex flex-col items-center justify-center gap-2">
 
-          <div>
-            <h1>Declare seu Imposto de Renda</h1>
+          <div className="w-80">
+            <h1 className="font-bold text-4xl">Declare seu Imposto de Renda</h1>
           </div>
 
-          <div>
-            <h2>Com segurança e sem riscos.</h2>
+          <div className="w-80">
+            <h2 className="font-bold text-[22.05px] text-blue-600">Com segurança e sem riscos.</h2>
+          </div>
+
+          <div className="w-80 mt-6">
+            <h1 className="font-medium text-[15px]">Entre em contato agora e deixe seu Imposto de Renda nas mãos de especialistas.</h1>
           </div>
 
         </div>
 
-        <div>
-
-          <h1>Entre em contato agora e deixe seu Imposto de Renda nas mãos de especialistas.</h1>
-
+        <div className="w-full flex items-center justify-center">
+          <button className="bg-green-500 w-[244px] md:w-[250px] md:ml-8 flex items-center justify-center gap-1 p-2 text-white rounded-md mt-16">
+            <FaWhatsapp className="w-5 h-6" />
+            <h1 className="font-medium text-2xl">Entrar em contato</h1>
+          </button>
         </div>
 
-        <button className="bg-green-500 md:w-[250px] md:ml-8 flex items-center justify-center gap-1 p-2 text-white rounded-md">
-          <FaWhatsapp />
-          Entrar em contato
-        </button>
-
-        <div>
-          <Image src="/#.png" alt="Grafico" width={100} height={24} />
+        <div className="w-full">
+          <Image src="/grafico2.png" alt="Grafico" width={600} height={100} className="w-full" />
         </div>
 
       </section>
