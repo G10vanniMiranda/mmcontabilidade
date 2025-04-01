@@ -8,9 +8,9 @@ export default function Home() {
   return (
     <div className="w-screen">
 
-      {/* sessão 01 */}
       <div className="md:h-[135vh] md:bg-[url(/sessao1-2.png)] md:w-screen bg-contain">
 
+        {/* sessão 01 */}
         <section className="h-[80vh] md:h-[70vh] w-screen z-0 flex items-center justify-center
         bg-[url(/infopage-mobile.png)] md:bg-[url(/infopage-mobile2.png)]" >
 
