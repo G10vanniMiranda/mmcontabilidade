@@ -6,69 +6,72 @@ import { FaWhatsapp } from "react-icons/fa";
 
 export default function Home() {
   return (
-    <div>
+    <div className="w-screen">
 
       {/* sessão 01 */}
-      <section className="h-screen w-screen z-0 flex items-center justify-center
-      bg-[url(/infopage-mobile.png)] md:bg-[url(/infopage-desktop.png)] bg-cover bg-center">
+      <div className="md:h-[135vh] md:bg-[url(/sessao1-2.png)] md:w-screen bg-contain">
 
-        <div className="flex flex-col gap-2 max-w-72 absolute md:bottom-28 bottom-26">
+        <section className="h-[80vh] md:h-[70vh] w-screen z-0 flex items-center justify-center
+        bg-[url(/infopage-mobile.png)] md:bg-[url(/infopage-mobile2.png)]" >
 
-          <Image src="/logo.png" alt="Logo MM" width={500} height={24} className="w-52 " />
+          <div className="flex flex-col gap-2 max-w-72 absolute bottom-26 md:top-20 md:left-28">
 
-          <h1 className="text-5xl font-bold">Precisando declarar seu Imposto de Renda?</h1>
+            <Image src="/logo.png" alt="Logo MM" width={500} height={24} className="w-52 " />
 
-          <div className="w-64">
-            <h2 className="text-blue-500 text-[26px] font-medium">Nós Cuidamos de Tudo Para Você!</h2>
-          </div>
+            <h1 className="text-5xl md:text-4xl font-bold">Precisando declarar seu Imposto de Renda?</h1>
 
-        </div>
-
-      </section>
-
-      {/* sessão 02 */}
-      <section className="h-screen w-screen flex items-center justify-center relative
-      bg-[url(/sessao2.png)] md:bg-[url(/sessao2-desk.png)]">
-
-        <div className=" w-screen h-auto flex flex-col md:flex-row items-center 
-          justify-center md:justify-start gap-6 p-8 mb-36 ">
-
-          <Image className=" md:mt-0 mt-60 md:ml-10 w-full md:w-96 h-[50vh] " src="/mulher-sessao2.png" alt="Mulher com a mão na cabeça" width={700} height={100} />
-
-          <div className="flex flex-col gap-6 md:w-[400px]">
-
-            <h1 className="text-6xl font-semibold text-white">Evite dores de cabeça!</h1>
-
-            <motion.div
-              initial={{ opacity: 0, x: 100 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: 100 }}
-              transition={{ duration: 1.9 }}
-            >
-
-              <h2 className="text-white text-xl">Conte com especialistas para garantir uma declaração segura, rápida e sem complicações.</h2>
-
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, scale: 0 }}
-              whileInView={{ opacity: 1, scale: 1.1 }}
-              exit={{ opacity: 0, scale: 0 }}
-              transition={{ duration: 1.9 }}
-            >
-
-              <button className="bg-green-500 md:w-[250px] md:ml-8 flex items-center justify-center gap-1 p-2 text-white rounded-md">
-                <FaWhatsapp />
-                Entrar em contato
-              </button>
-
-            </motion.div>
+            <div className="w-44">
+              <h2 className="text-blue-500 text-[26px] md:text-[18px] font-medium">Nós Cuidamos de Tudo Para Você!</h2>
+            </div>
 
           </div>
+        </section>
 
-        </div>
+        {/* sessão 02 */}
+        <section className="md:h-96 h-[120vh] w-screen flex items-center justify-center relative
+        bg-[url(/sessao2.png)] md:bg-[url(/sessao200.png)]">
 
-      </section>
+          <div className="w-screen h-auto flex flex-col md:flex-row items-center
+              justify-center md:justify-start gap-6 p-8 mb-36 md:absolute md:top-0 ">
+
+            <Image className="md:mt-0 mt-80 md:ml-10 w-full md:w-72  h-[50vh] " src="/mulher-sessao2.png" alt="Mulher com a mão na cabeça" width={700} height={100} />
+
+            <div className="flex flex-col gap-6 md:w-[400px]">
+
+              <h1 className="text-6xl font-semibold text-white">Evite dores de cabeça!</h1>
+
+              <motion.div
+                initial={{ opacity: 0, x: 100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: 100 }}
+                transition={{ duration: 1.9 }}
+              >
+
+                <h2 className="text-white text-xl">Conte com especialistas para garantir uma declaração segura, rápida e sem complicações.</h2>
+
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0 }}
+                whileInView={{ opacity: 1, scale: 1.1 }}
+                exit={{ opacity: 0, scale: 0 }}
+                transition={{ duration: 1.9 }}
+              >
+
+                <button className="bg-green-500 md:w-[250px] md:ml-8 flex items-center justify-center gap-1 p-2 text-white rounded-md">
+                  <FaWhatsapp />
+                  Entrar em contato
+                </button>
+
+              </motion.div>
+
+            </div>
+
+          </div>
+
+        </section>
+
+      </div>
 
       {/* sessão 03 */}
       <section className="h-auto w-screen flex flex-col items-center justify-center md:justify-between ">
@@ -237,8 +240,7 @@ export default function Home() {
 
       {/* sessão 05 */}
       <section className="h-screen w-screen flex flex-col items-center justify-center gap-8 pt-80
-      bg-[url(/mulher-sessao5.png)] md:bg-[url(/#.png)] bg-cover bg-center">
-
+      bg-[url(/mulher-sessao5.png)] md:bg-[url(/mulher-sessao5-desk.png)] bg-cover bg-center">
 
         <div className="w-80 flex items-center justify-center gap-4">
 
@@ -341,6 +343,6 @@ export default function Home() {
 
       </section>
 
-    </div>
+    </div >
   );
 }
