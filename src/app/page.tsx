@@ -154,7 +154,7 @@ export default function Home() {
 
       {/* sessão 04 */}
       <section className="h-screen w-screen flex flex-col items-center justify-center gap-4 pt-96
-      bg-[url(/busines.png)] md:bg-[url(/#.png)] bg-cover bg-center">
+      bg-[url(/busines.png)] md:bg-[url(/busines-desck.png)] bg-cover bg-center">
 
         <div className="flex flex-col items-center justify-center">
 
