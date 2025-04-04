@@ -1,1 +1,17 @@
 @import "tailwindcss";
+
+.btn-css{
+    padding: 10px 50px; 
+    margin-right: 3px; 
+    background-color: green
+}
+
+header{
+    /*
+    position: static; // default
+    position: fixed;  // sai do fluxo da página e fica fixo na tela
+    position: sticky; // fica fixo na tela
+    position: absolute; // sai do fluxo da página e fica fixo na tela, mas não ocupa espaço
+    position: relative; // 
+    */
+}

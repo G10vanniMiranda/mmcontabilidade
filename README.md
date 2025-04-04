@@ -23,3 +23,9 @@
 * Sessão 06
 
 <img src="./screens/sessao6.jpg" alt="Print da Sessão 06">
+
+
+#### Revisão:
+
+> * Flex
+> * Position

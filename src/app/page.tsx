@@ -1,10 +1,13 @@
 'use client'
 
+import Whats from "@/components/whats";
 import { motion } from "motion/react";
 import Image from "next/image";
 import { FaWhatsapp } from "react-icons/fa";
 
 export default function Home() {
+  // position: static, absolute, relative, fixed, sticky 
+  // flex: gap-0, flex-row, flex-col, items-center, justify-center
   return (
     <div className="w-screen">
 
@@ -51,19 +54,7 @@ export default function Home() {
 
               </motion.div>
 
-              <motion.div
-                initial={{ opacity: 0, scale: 0 }}
-                whileInView={{ opacity: 1, scale: 1.1 }}
-                exit={{ opacity: 0, scale: 0 }}
-                transition={{ duration: 1.9 }}
-              >
-
-                <button className="bg-green-500 md:w-[250px] md:ml-8 flex items-center justify-center gap-1 p-2 text-white rounded-md">
-                  <FaWhatsapp />
-                  Entrar em contato
-                </button>
-
-              </motion.div>
+              <Whats />
 
             </div>
 
@@ -130,20 +121,8 @@ export default function Home() {
             </div>
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0 }}
-            whileInView={{ opacity: 1, scale: 1.1 }}
-            exit={{ opacity: 0, scale: 0 }}
-            transition={{ duration: 1.9 }}
-            className="w-full flex items-center justify-center"
-          >
+          <Whats />
 
-            <button className="bg-green-500 md:w-[250px] md:ml-8 flex items-center justify-center gap-1 p-1 w-48 text-white rounded-md">
-              <FaWhatsapp />
-              Entrar em contato
-            </button>
-
-          </motion.div>
         </div>
 
         <div className="mt-4">
@@ -331,10 +310,7 @@ export default function Home() {
         </div>
 
         <div className="w-full flex items-center justify-center">
-          <button className="bg-green-500 w-[244px] md:w-[250px] md:ml-8 flex items-center justify-center gap-1 p-2 text-white rounded-md mt-16">
-            <FaWhatsapp className="w-5 h-6" />
-            <h1 className="font-medium text-2xl">Entrar em contato</h1>
-          </button>
+          <Whats />
         </div>
 
         <div className="w-full">
