@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div className="w-screen">
 
-      <div className="md:h-[135vh] md:bg-[url(/sessao1-2.png)] bg-no-repeat md:w-full bg-cover">
+      <div className="md:h-[135vh] md:bg-[url(/sessao1-2.png)] bg-no-repeat md:w-full bg-cover relative">
 
         {/* sessão 01 */}
         <section className="h-[80vh] md:h-[70vh] w-fullz-0 flex items-center justify-center
@@ -18,7 +18,7 @@ export default function Home() {
 
           <div className="flex flex-col gap-2 max-w-72 absolute bottom-26 md:top-20 md:left-28">
 
-            <Image src="/logo.png" alt="Logo MM" width={500} height={24} className="w-52 " />
+            <Image src="/logo.svg" alt="Logo MM" width={500} height={500} quality={100} className="w-52 " />
 
             <h1 className="text-5xl md:text-4xl font-bold">Precisando declarar seu Imposto de Renda?</h1>
 
@@ -61,6 +61,7 @@ export default function Home() {
 
         </section>
 
+        <Image src="/logo.svg" alt="Logo MM" width={500} height={500} quality={100} className="w-52 absolute left-10 md:-bottom-20" />
       </div>
 
       {/* sessão 03 */}
