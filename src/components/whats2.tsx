@@ -6,22 +6,14 @@ import { FaWhatsapp } from "react-icons/fa";
 
 export default function Whats2() {
     return (
-        <motion.div
-            initial={{ opacity: 0, scale: 0 }}
-            whileInView={{ opacity: 1, scale: 1.1 }}
-            exit={{ opacity: 0, scale: 0 }}
-            transition={{ duration: 1.9 }}
-        >
-
+        <div className="fixed bottom-5 mobile-zap-text right-2 z-50 flex items-center w-[130px] md:w-[120px]">
             <Link
                 target="_blank"
                 href={`https://wa.me/5569984069935?text=Olá vim me pelo site da Contabilidade e gostaria de mais informações sobre a Declaração de Imposto de Renda.`}
-                className="bg-green-500 md:w-[250px] md:ml-8 flex items-center justify-center gap-1 p-0 text-sm text-white rounded-md"
             >
-                <FaWhatsapp />
-                Entrar em contato
+                <FaWhatsapp size={38} className="bg-green-500 text-white h-14 w-14 rounded-full animate-pulse z-10" />
             </Link>
-
-        </motion.div>
+            <h3 className="absolute md:right-[5px] right-[15px] mobile-zap-text z-0 text-white bg-green-500 animate-pulse w-16 text-md rounded-r-xl p-1 font-semibold">Contato</h3>
+        </div>
     );
 }

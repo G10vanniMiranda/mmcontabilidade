@@ -1,6 +1,7 @@
 'use client'
 
 import Whats from "@/components/whats";
+import Whats2 from "@/components/whats2";
 import { motion } from "motion/react";
 import Image from "next/image";
 
@@ -8,35 +9,34 @@ export default function Home() {
   // position: static, absolute, relative, fixed, sticky 
   // flex: gap-0, flex-row, flex-col, items-center, justify-center
   return (
-    <div className="w-screen">
+    <div className="w-screen overflow-hidden max-w-[1400px] mx-auto">
 
-      <div className="md:h-[135vh] md:bg-[url(/sessao1-2.png)] bg-no-repeat md:w-full bg-cover relative">
+      <div className="mobile-container" id="mobile-container">
 
         {/* sessão 01 */}
-        <section className="h-[80vh] md:h-[70vh] w-fullz-0 flex items-center justify-center
-        bg-[url(/infopage-mobile.png)] md:bg-[url(/infopage-mobile2.png)]" >
+        <section className="mobile-session-1 h-[50vh] md:h-[70vh] w-full flex items-center  mb-52">
 
-          <div className="flex flex-col gap-2 max-w-72 absolute bottom-26 md:top-20 md:left-28">
+          <div className="mobile-content-session-1 flex flex-col gap-2 w-72 h-fit z-50 ml-44">
 
             <Image src="/logo.svg" alt="Logo MM" width={500} height={500} quality={100} className="w-52 " />
 
-            <h1 className="text-5xl md:text-4xl font-bold">Precisando declarar seu Imposto de Renda?</h1>
+            <h1 className="session-1-description-1 text-5xl md:text-4xl font-bold">Precisando declarar seu Imposto de Renda?</h1>
 
             <div className="w-44">
-              <h2 className="text-blue-500 text-[26px] md:text-[18px] font-medium">Nós Cuidamos de Tudo Para Você!</h2>
+              <h2 className="session-1-description-2 text-blue-500 text-[26px] md:text-[18px] font-medium">Nós Cuidamos de Tudo Para Você!</h2>
             </div>
 
           </div>
+
         </section>
 
         {/* sessão 02 */}
-        <section className="md:h-96 h-[120vh] w-screen flex items-center justify-center relative
-        bg-[url(/sessao2.png)] md:bg-[url(/sessao200.png)]">
+        <section className="mobile-session-2 h-[50vh] md:h-[45vh] md:mt-0 w-full flex items-center justify-center">
 
           <div className="w-screen h-auto flex flex-col md:flex-row items-center
-              justify-center md:justify-start gap-6 p-8 mb-36 md:absolute md:top-0 ">
+              justify-center md:justify-start gap-6 p-8 mb-36 ">
 
-            <Image className="md:mt-0 mt-80 md:ml-10 w-full md:w-72  h-[50vh] " src="/mulher-sessao2.png" alt="Mulher com a mão na cabeça" width={700} height={100} />
+            <Image className="md:mt-0 mobile-image-session-2 mt-80 md:ml-10 w-full md:w-72 h-[50vh] " src="/mulher-sessao2.png" alt="Mulher com a mão na cabeça" width={700} height={100} />
 
             <div className="flex flex-col gap-6 md:w-[400px]">
 
@@ -50,18 +50,13 @@ export default function Home() {
               >
 
                 <h2 className="text-white text-xl">Conte com especialistas para garantir uma declaração segura, rápida e sem complicações.</h2>
-
               </motion.div>
-
               <Whats />
-
             </div>
-
           </div>
 
         </section>
-
-        <Image src="/logo.svg" alt="Logo MM" width={500} height={500} quality={100} className="w-52 absolute left-10 md:-bottom-20" />
+        {/* <Image src="/logo.svg" alt="Logo MM" width={500} height={500} quality={100} className="w-52 absolute left-10 md:-bottom-20" /> */}
       </div>
 
       {/* sessão 03 */}
@@ -132,7 +127,7 @@ export default function Home() {
       </section>
 
       {/* sessão 04 */}
-      <section className="h-screen w-screen flex flex-col items-center justify-center gap-4 pt-96
+      <section className="h-screen w-full flex flex-col items-center justify-center gap-4 pt-96
       bg-[url(/busines.png)] md:bg-[url(/busines-desck.png)] bg-cover bg-center">
 
         <div className="flex flex-col items-center justify-center">
@@ -286,8 +281,7 @@ export default function Home() {
       </section>
 
       {/* sessão 06 */}
-      <section className="h-auto w-screen flex flex-col items-center justify-center
-        bg-[url(/mulher-sessao6.png)] md:bg-[url(/#.png)] bg-cover bg-center">
+      <section className="h-screen bg-red-600 w-screen flex flex-col items-center justify-center">
 
         <div className="w-full flex justify-end">
           <Image src="/calculadora2.png" alt="Check" width={180} height={100} />
@@ -317,8 +311,9 @@ export default function Home() {
           <Image src="/grafico2.png" alt="Grafico" width={600} height={100} className="w-full" />
         </div>
 
-      </section>
+      </section> {/* fim sessão 06 */}
 
+      <Whats2 />
     </div >
   );
 }
