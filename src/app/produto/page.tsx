@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 
-export default function () {
+export default function Produto() {
     // position: static, absolute, relative, fixed, sticky, z-index
     // flex: gap-0, flex-row, flex-col, items-center, justify-center
     return (

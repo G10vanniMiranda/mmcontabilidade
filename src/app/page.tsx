@@ -3,7 +3,6 @@
 import Whats from "@/components/whats";
 import { motion } from "motion/react";
 import Image from "next/image";
-import { FaWhatsapp } from "react-icons/fa";
 
 export default function Home() {
   // position: static, absolute, relative, fixed, sticky 
@@ -11,10 +10,10 @@ export default function Home() {
   return (
     <div className="w-screen">
 
-      <div className="md:h-[135vh] md:bg-[url(/sessao1-2.png)] md:w-screen bg-contain">
+      <div className="md:h-[135vh] md:bg-[url(/sessao1-2.png)] bg-no-repeat md:w-full bg-cover">
 
         {/* sessão 01 */}
-        <section className="h-[80vh] md:h-[70vh] w-screen z-0 flex items-center justify-center
+        <section className="h-[80vh] md:h-[70vh] w-fullz-0 flex items-center justify-center
         bg-[url(/infopage-mobile.png)] md:bg-[url(/infopage-mobile2.png)]" >
 
           <div className="flex flex-col gap-2 max-w-72 absolute bottom-26 md:top-20 md:left-28">
