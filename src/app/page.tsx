@@ -9,9 +9,9 @@ export default function Home() {
   // position: static, absolute, relative, fixed, sticky 
   // flex: gap-0, flex-row, flex-col, items-center, justify-center
   return (
-    <div className="w-screen overflow-hidden max-w-[1400px] mx-auto">
+    <div className="w-screen max-w-[1400px] mx-auto">
 
-      <div className="mobile-container" id="mobile-container">
+      <div className="mobile-container overflow-hidden" id="mobile-container">
 
         {/* sessão 01 */}
         <section className="mobile-session-1 h-[50vh] md:h-[70vh] w-full flex items-center  mb-52">
@@ -60,7 +60,7 @@ export default function Home() {
       </div>
 
       {/* sessão 03 */}
-      <section className="h-auto w-screen flex flex-col items-center justify-center md:justify-between ">
+      <section className="h-auto overflow-hidden w-screen flex flex-col items-center justify-center md:justify-between ">
 
         <div className="w-full h-96 flex justify-between">
 
@@ -127,7 +127,7 @@ export default function Home() {
       </section>
 
       {/* sessão 04 */}
-      <section className="h-screen w-full flex flex-col items-center justify-center gap-4 pt-96
+      <section className="h-screen overflow-hidden w-full flex flex-col items-center justify-center gap-4 pt-96
       bg-[url(/busines.png)] md:bg-[url(/busines-desck.png)] bg-cover bg-center">
 
         <div className="flex flex-col items-center justify-center">
@@ -213,7 +213,7 @@ export default function Home() {
       </section>
 
       {/* sessão 05 */}
-      <section className="h-screen w-screen flex flex-col items-center justify-center gap-8 pt-80
+      <section className="h-screen overflow-hidden w-screen flex flex-col items-center justify-center gap-8 pt-80
       bg-[url(/mulher-sessao5.png)] md:bg-[url(/mulher-sessao5-desk.png)] bg-cover bg-center">
 
         <div className="w-80 flex items-center justify-center gap-4">
@@ -281,34 +281,42 @@ export default function Home() {
       </section>
 
       {/* sessão 06 */}
-      <section className="h-screen bg-red-600 w-screen flex flex-col items-center justify-center">
+      <section className="h-screen  md:h-[60vh] w-full flex items-center justify-center bg-slate-800">
 
-        <div className="w-full flex justify-end">
-          <Image src="/calculadora2.png" alt="Check" width={180} height={100} />
+        <div className="bg-amber-700 relative z-10 w-full md:flex-1 h-screen">
+          <div className="absolute z-50 bottom-44 -left-20">
+            <Image src="/calculadora.png" alt="Check" width={180} height={100} />
+          </div>
         </div>
 
-        <div className="w-full flex flex-col items-center justify-center gap-2">
+        <div className="bg-red-500 flex md:flex-1 h-screen pt-[370px] flex-col">
 
-          <div className="w-80">
-            <h1 className="font-bold text-4xl">Declare seu Imposto de Renda</h1>
-          </div>
+          <div className="w-full flex flex-col items-center justify-center gap-2 border">
 
-          <div className="w-80">
-            <h2 className="font-bold text-[22.05px] text-blue-600">Com segurança e sem riscos.</h2>
-          </div>
+            <div className="w-80">
+              <h1 className="font-bold text-4xl">Declare seu Imposto de Renda</h1>
+            </div>
 
-          <div className="w-80 mt-6">
-            <h1 className="font-medium text-[15px]">Entre em contato agora e deixe seu Imposto de Renda nas mãos de especialistas.</h1>
+            <div className="w-80">
+              <h2 className="font-bold text-[22.05px] text-blue-600">Com segurança e sem riscos.</h2>
+            </div>
+
+            <div className="w-80 mt-6">
+              <h1 className="font-medium text-[15px]">Entre em contato agora e deixe seu Imposto de Renda nas mãos de especialistas.</h1>
+            </div>
+
+            <div className="w-full flex items-center justify-center">
+              <Whats />
+            </div>
+
           </div>
 
         </div>
 
-        <div className="w-full flex items-center justify-center">
-          <Whats />
-        </div>
-
-        <div className="w-full">
-          <Image src="/grafico2.png" alt="Grafico" width={600} height={100} className="w-full" />
+        <div className="bg-green-600 md:flex-1 h-screen items-start relative">
+          <div className="absolute z-50 top-0 -right-20">
+            <Image src="/grafico.png" alt="Grafico" width={600} height={100} className="w-full" />
+          </div>
         </div>
 
       </section> {/* fim sessão 06 */}
