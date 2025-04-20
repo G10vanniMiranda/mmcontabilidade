@@ -60,7 +60,7 @@ export default function Home() {
       </div>
 
       {/* sessão 03 */}
-      <section className="h-auto overflow-hidden w-screen flex flex-col items-center justify-center md:justify-between ">
+      <section className="h-auto overflow-hidden w-screen flex flex-col items-center justify-center md:justify-between">
 
         <div className="w-full h-96 flex justify-between">
 
@@ -281,17 +281,17 @@ export default function Home() {
       </section>
 
       {/* sessão 06 */}
-      <section className="h-screen  md:h-[60vh] w-full flex items-center justify-center bg-slate-800">
+      <section className="h-screen  md:h-[60vh] w-full flex items-center justify-center ">
 
-        <div className="bg-amber-700 relative z-10 w-full md:flex-1 h-screen">
+        <div className="relative z-10 w-full md:flex-1 h-screen">
           <div className="absolute z-50 bottom-44 -left-20">
             <Image src="/calculadora.png" alt="Check" width={180} height={100} />
           </div>
         </div>
 
-        <div className="bg-red-500 flex md:flex-1 h-screen pt-[370px] flex-col">
+        <div className="flex md:flex-1 h-screen pt-[370px] flex-col">
 
-          <div className="w-full flex flex-col items-center justify-center gap-2 border">
+          <div className="w-full flex flex-col items-center justify-center gap-2">
 
             <div className="w-80">
               <h1 className="font-bold text-4xl">Declare seu Imposto de Renda</h1>
@@ -313,7 +313,7 @@ export default function Home() {
 
         </div>
 
-        <div className="bg-green-600 md:flex-1 h-screen items-start relative">
+        <div className=" md:flex-1 h-screen items-start relative">
           <div className="absolute z-50 top-0 -right-20">
             <Image src="/grafico.png" alt="Grafico" width={600} height={100} className="w-full" />
           </div>
