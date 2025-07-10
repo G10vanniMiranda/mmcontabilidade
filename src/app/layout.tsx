@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "MM Contabilidade",
-  description: "Declação de Imposto de Renda",
+  description: "Escritório de contabilidade em Porto Velho - RO",
 };
 
 export default function RootLayout({
