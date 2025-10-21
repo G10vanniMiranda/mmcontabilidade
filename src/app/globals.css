@@ -3,11 +3,23 @@
 .btn-css{
     padding: 10px 50px; 
     margin-right: 3px; 
-    background-color: green
+    background-color: #1d4ed8; /* blue-700 */
+    color: white;
 }
 
 .mobile-container{
-    @apply md:h-[150vh] h-[190vh] bg-[url(/infopage-mobile.png)] bg-cover md:bg-[url(/sessao1-2.png)] md:bg-cover
+    height: 190vh;
+    background-image: url('/infopage-mobile.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+    .mobile-container{
+        height: 150vh;
+        background-image: url('/sessao1-2.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
 }
 #mobile-container{
     background-position: center;

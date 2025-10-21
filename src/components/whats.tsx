@@ -15,7 +15,7 @@ export default function Whats() {
 
             <Link
                 href={`https://wa.me/5569984069935?text=Olá, vim me pelo site da MM Contabilidade e gostaria de mais informações sobre a Declaração de Imposto de Renda.`}
-                className="bg-green-500 md:w-[250px] md:ml-8 flex items-center w-fit justify-center gap-1 p-1 px-3 text-white rounded-md"
+                className="bg-blue-600 hover:bg-blue-700 md:w-[250px] md:ml-8 flex items-center w-fit justify-center gap-1 p-1 px-3 text-white rounded-md"
             >
                 <FaWhatsapp />
                 Entrar em contato

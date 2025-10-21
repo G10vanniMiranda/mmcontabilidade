@@ -10,9 +10,9 @@ export default function Whats2() {
                 target="_blank"
                 href={`https://wa.me/5569984069935?text=Olá vim me pelo site da Contabilidade e gostaria de mais informações sobre a Declaração de Imposto de Renda.`}
             >
-                <FaWhatsapp size={38} className="bg-green-500 text-white h-14 w-14 rounded-full animate-pulse z-10" />
+                <FaWhatsapp size={38} className="bg-blue-600 text-white h-14 w-14 rounded-full animate-pulse z-10" />
             </Link>
-            <h3 className="absolute md:right-[5px] right-[15px] mobile-zap-text z-0 text-white bg-green-500 animate-pulse w-16 text-md rounded-r-xl p-1 font-semibold">Contato</h3>
+            <h3 className="absolute md:right-[5px] right-[15px] mobile-zap-text z-0 text-white bg-blue-600 animate-pulse w-16 text-md rounded-r-xl p-1 font-semibold">Contato</h3>
         </div>
     );
 }

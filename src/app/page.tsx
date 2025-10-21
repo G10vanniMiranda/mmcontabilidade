@@ -1,327 +1,76 @@
-'use client'
-
-import Whats from "@/components/whats";
-import Whats2 from "@/components/whats2";
-import { motion } from "motion/react";
 import Image from "next/image";
 
 export default function Home() {
-  // position: static, absolute, relative, fixed, sticky 
-  // flex: gap-0, flex-row, flex-col, items-center, justify-center
   return (
-    <div className="w-screen max-w-[1400px] mx-auto">
+    <main>
 
-      <div className="mobile-container overflow-hidden" id="mobile-container">
+      {/* Seção 1 */}
+      <section
+        className="relative w-full min-h-[80vh] md:min-h-[90vh] overflow-hidden text-white"
+      >
+        {/* Background image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: "url('/fundo-seçao1.png')",
+          }}
+        />
+        {/* Desktop background override */}
+        <div
+          className="hidden md:block absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: "url('/fundo-seçao1.png')",
+          }}
+        />
 
-        {/* sessão 01 */}
-        <section className="mobile-session-1 h-[50vh] md:h-[70vh] w-full flex items-center  mb-52">
+        {/* Overlay para contraste do texto */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent" />
 
-          <div className="mobile-content-session-1 flex flex-col gap-2 w-72 h-fit z-50 ml-44">
-
-            <Image src="/logo.svg" alt="Logo MM" width={500} height={500} quality={100} className="w-52 " />
-
-            <h1 className="session-1-description-1 text-5xl md:text-4xl font-bold">Precisando declarar seu Imposto de Renda?</h1>
-
-            <div className="w-44">
-              <h2 className="session-1-description-2 text-blue-500 text-[26px] md:text-[18px] font-medium">Nós Cuidamos de Tudo Para Você!</h2>
+        {/* Conteúdo */}
+        <div className="relative z-10 mx-auto w-full max-w-[1400px] px-4 md:px-8 py-12 md:py-20">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+            {/* Imagem da mulher - direita no desktop, acima do texto no mobile */}
+            <div className="order-1 md:order-2 flex justify-center md:justify-end">
+              <div className="relative z-20">
+                <Image
+                  src="/mulher-sessao2.png"
+                  alt="Profissional de contabilidade"
+                  width={640}
+                  height={800}
+                  priority
+                  className="w-[70%] max-w-[360px] md:w-[90%] md:max-w-[520px] h-auto object-contain"
+                />
+              </div>
             </div>
 
-          </div>
-
-        </section>
-
-        {/* sessão 02 */}
-        <section className="mobile-session-2 h-[50vh] md:h-[45vh] md:mt-0 w-full flex items-center justify-center">
-
-          <div className="w-screen h-auto flex flex-col md:flex-row items-center
-              justify-center md:justify-start gap-6 p-8 mb-36 ">
-
-            <Image className="md:mt-0 mobile-image-session-2 mt-80 md:ml-10 w-full md:w-72 h-[50vh] " src="/mulher-sessao2.png" alt="Mulher com a mão na cabeça" width={700} height={100} />
-
-            <div className="flex flex-col gap-6 md:w-[400px]">
-
-              <h1 className="text-6xl font-semibold text-white">Evite dores de cabeça!</h1>
-
-              <motion.div
-                initial={{ opacity: 0, x: 100 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 100 }}
-                transition={{ duration: 1.9 }}
-              >
-
-                <h2 className="text-white text-xl">Conte com especialistas para garantir uma declaração segura, rápida e sem complicações.</h2>
-              </motion.div>
-              <Whats />
+            {/* Texto - esquerda no desktop, abaixo no mobile */}
+            <div className="order-2 md:order-1">
+              <h1 className="text-3xl md:text-5xl font-bold leading-tight">
+                Soluções contábeis completas para sua empresa crescer com segurança
+              </h1>
+              <p className="mt-4 text-blue-50/90 md:text-lg max-w-xl">
+                Confiança, precisão e agilidade para apoiar as decisões do seu negócio.
+              </p>
             </div>
           </div>
-
-        </section>
-        {/* <Image src="/logo.svg" alt="Logo MM" width={500} height={500} quality={100} className="w-52 absolute left-10 md:-bottom-20" /> */}
-      </div>
-
-      {/* sessão 03 */}
-      <section className="h-auto overflow-hidden w-screen flex flex-col items-center justify-center md:justify-between">
-
-        <div className="w-full h-96 flex justify-between">
-
-          <Image src="/calculadora.png" alt="Calculadora" width={140} height={100} />
-
-          <Image src="/grafico.png" alt="Grafico" width={140} height={100} />
-
         </div>
 
-        <div className="w-96 h-auto flex flex-col md:w-[600px]">
-          <div className="flex items-center justify-center gap-4 p-4">
-            <div>
-              <Image src="/atencao.png" alt="Atenção" width={100} height={100} />
-            </div>
-
-            <div>
-              <h1 className="font-semibold text-2xl">Problema</h1>
-              <h2>Declarar o Imposto de Renda pode ser um processo confuso e cheio de detalhes, um erro pode resultar em multas e até cair na malha fina. </h2>
-            </div>
-          </div>
-
-          <div className="flex items-center justify-center gap-4 p-4">
-            <div>
-              <Image src="/nota.png" alt="Bloco de nota" width={100} height={100} />
-            </div>
-
-            <div>
-              <h1 className="font-semibold text-2xl">Complicações</h1>
-              <h2>Erros na declaração podem gerar pendências com a Receita Federal, resultando em dores de cabeça e possíveis penalidades. </h2>
+        {/* Gráficos no canto inferior esquerdo, por trás da mulher */}
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 md:h-56">
+          <div className="relative h-full w-full max-w-[1400px] mx-auto">
+            <div className="absolute left-0 bottom-0 z-10 opacity-90">
+              <Image
+                src="/grafico.png"
+                alt="Gráfico"
+                width={220}
+                height={120}
+                className="w-40 md:w-56 h-auto object-contain"
+              />
             </div>
           </div>
-
-          <div className="flex items-center justify-center gap-4 p-4">
-            <div>
-              <Image src="/tempo.png" alt="Tempo" width={100} height={100} />
-            </div>
-
-            <div>
-              <h1 className="font-semibold text-2xl">Tempo</h1>
-              <h2>A correria do dia a dia pode fazer com que você adie a declaração e corra o risco de pagar multas por atraso. </h2>
-            </div>
-          </div>
-
-          <div className="flex items-center justify-center gap-4 p-4">
-            <div>
-              <Image src="/alvo.png" alt="Alvo" width={100} height={100} />
-            </div>
-
-            <div>
-              <h1 className="font-semibold text-2xl">Solução</h1>
-              <h2>Evite problemas e tenha tranquilidade!
-                Entre em contato agora e deixe seu Imposto de Renda nas mãos de especialistas. </h2>
-            </div>
-          </div>
-
-          <Whats />
-
         </div>
-
-        <div className="mt-4">
-          <Image src="/calculadora1.png" alt="Calculadora com grafico" width={200} height={100} />
-        </div>
-
       </section>
 
-      {/* sessão 04 */}
-      <section className="h-screen overflow-hidden w-full flex flex-col items-center justify-center gap-4 pt-96
-      bg-[url(/busines.png)] md:bg-[url(/busines-desck.png)] bg-cover bg-center">
-
-        <div className="flex flex-col items-center justify-center">
-
-          <div className="flex items-center justify-center gap-4">
-
-            <div className="w-11">
-              <Image src="/dev.png" alt="Desenvolvedor" width={50} height={100} />
-            </div>
-
-            <div>
-              <h1 className="font-bold text-3xl">Como funciona?</h1>
-            </div>
-
-          </div>
-
-          <div className="w-56 flex items-center justify-center gap-4">
-
-            <div className="w-11">
-              <Image src="/cadeado.png" alt="Cadeado" width={50} height={100} />
-            </div>
-
-            <div>
-              <h1 className=""> Segurança e sigilo total das suas informações </h1>
-            </div>
-
-          </div>
-
-        </div>
-
-        <div className="w-72 h-auto flex flex-col items-center justify-center gap-2">
-
-          <div className="flex items-center justify-center gap-4">
-            <div className="w-11">
-              <Image src="/confirm.png" alt="Confirmação" width={50} height={100} />
-            </div>
-
-            <div className="w-64">
-              <h1 className="font-semibold text-2xl">Contato e envio</h1>
-
-              <h2>Você entra em contato e nos envia seus documentos.</h2>
-            </div>
-          </div>
-
-          <div className="flex items-center justify-center gap-4">
-            <div className="w-11">
-              <Image src="/confirm.png" alt="Confirmação" width={50} height={100} />
-            </div>
-
-            <div className="w-64">
-              <h1 className="font-semibold text-2xl">Conferência</h1>
-
-              <h2>Revisamos todos os detalhes para garantir precisão.</h2>
-            </div>
-          </div>
-
-          <div className="flex items-center justify-center gap-4">
-            <div className="w-11">
-              <Image src="/confirm.png" alt="Confirmação" width={50} height={100} />
-            </div>
-
-            <div className="w-64">
-              <h1 className="font-semibold text-2xl">Análise e Preparação</h1>
-
-              <h2>Nossa equipe analisa e prepara sua declaração.</h2>
-            </div>
-          </div>
-
-          <div className="flex items-center justify-center gap-4">
-            <div className="w-11">
-              <Image src="/confirm.png" alt="Confirmação" width={50} height={100} />
-            </div>
-
-            <div className="w-64">
-              <h1 className="font-semibold text-2xl">Envio e Comprovante</h1>
-
-              <h2>Enviamos para a Receita Federal e você recebe o comprovante.</h2>
-            </div>
-          </div>
-
-        </div>
-
-      </section>
-
-      {/* sessão 05 */}
-      <section className="h-screen overflow-hidden w-screen flex flex-col items-center justify-center gap-8 pt-80
-      bg-[url(/mulher-sessao5.png)] md:bg-[url(/mulher-sessao5-desk.png)] bg-cover bg-center">
-
-        <div className="w-80 flex items-center justify-center gap-4">
-
-          <Image src="/comprimento.png" alt="Comfirmação" width={50} height={100} />
-
-          <h1 className="font-bold text-3xl">Por que <br /> nos escolher?</h1>
-
-        </div>
-
-        <div className="w-72 h-auto flex flex-col gap-4">
-
-          <div className="w-auto flex items-center gap-4">
-
-            <div className="w-11">
-              <Image src="/confirm.png" alt="Check" width={50} height={100} />
-            </div>
-
-            <h1 className="font-semibold spaced-text w-64">Declaração 100% <br /> correta e sem riscos </h1>
-
-          </div>
-
-          <div className="flex items-center gap-4">
-
-            <div className="w-11">
-              <Image src="/confirm.png" alt="Check" width={50} height={100} />
-            </div>
-
-            <h1 className="font-semibold spaced-text w-64">Atendimento rápido e personalizado </h1>
-
-          </div>
-
-          <div className="flex items-center gap-4">
-
-            <div className="w-11">
-              <Image src="/confirm.png" alt="Check" width={50} height={100} />
-            </div>
-
-            <h1 className="font-semibold spaced-text w-64">Análise detalhada para garantir restituição máxima </h1>
-
-          </div>
-
-          <div className="flex items-center gap-4">
-
-            <div className="w-11">
-              <Image src="/confirm.png" alt="Check" width={50} height={100} />
-            </div>
-
-            <h1 className="font-semibold spaced-text w-64">Suporte completo em caso de dúvidas </h1>
-
-          </div>
-
-          <div className="flex items-center gap-4">
-
-            <div className="w-11">
-              <Image src="/confirm.png" alt="Check" width={50} height={100} />
-            </div>
-
-            <h1 className="font-semibold spaced-text w-64">Segurança e sigilo total das suas informações </h1>
-
-          </div>
-
-        </div>
-
-      </section>
-
-      {/* sessão 06 */}
-      <section className="h-screen  md:h-[60vh] w-full flex items-center justify-center ">
-
-        <div className="relative z-10 w-full md:flex-1 h-screen">
-          <div className="absolute z-50 bottom-44 -left-20">
-            <Image src="/calculadora.png" alt="Check" width={180} height={100} />
-          </div>
-        </div>
-
-        <div className="flex md:flex-1 h-screen pt-[370px] flex-col">
-
-          <div className="w-full flex flex-col items-center justify-center gap-2">
-
-            <div className="w-80">
-              <h1 className="font-bold text-4xl">Declare seu Imposto de Renda</h1>
-            </div>
-
-            <div className="w-80">
-              <h2 className="font-bold text-[22.05px] text-blue-600">Com segurança e sem riscos.</h2>
-            </div>
-
-            <div className="w-80 mt-6">
-              <h1 className="font-medium text-[15px]">Entre em contato agora e deixe seu Imposto de Renda nas mãos de especialistas.</h1>
-            </div>
-
-            <div className="w-full flex items-center justify-center">
-              <Whats />
-            </div>
-
-          </div>
-
-        </div>
-
-        <div className=" md:flex-1 h-screen items-start relative">
-          <div className="absolute z-50 top-0 -right-20">
-            <Image src="/grafico.png" alt="Grafico" width={600} height={100} className="w-full" />
-          </div>
-        </div>
-
-      </section> {/* fim sessão 06 */}
-
-      <Whats2 />
-    </div >
+    </main>
   );
 }
