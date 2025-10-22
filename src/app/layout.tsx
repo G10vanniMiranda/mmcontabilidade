@@ -27,7 +27,7 @@ export default function RootLayout({
     <html lang="pt-BR">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white text-blue-900`}>
         <Header />
-        <div className="pt-12 md:pt-16 flex flex-col justify-center h-auto overflow-hidden w-screen">
+        <div className="pt-11 md:pt-16 flex flex-col justify-center h-auto overflow-hidden w-screen">
           {children}
         </div>
       </body>

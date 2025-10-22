@@ -6,7 +6,7 @@ export default function Home() {
 
       {/* Seção 1 */}
       <section
-        className="relative w-full min-h-[80vh] md:min-h-[90vh] overflow-hidden text-white"
+        className="relative w-full min-h-[80vh] md:min-h-[90vh] overflow-hidden text-slate-900"
       >
         {/* Background image */}
         <div
@@ -15,6 +15,7 @@ export default function Home() {
             backgroundImage: "url('/fundo-seçao1.png')",
           }}
         />
+
         {/* Desktop background override */}
         <div
           className="hidden md:block absolute inset-0 bg-cover bg-center"
@@ -23,36 +24,45 @@ export default function Home() {
           }}
         />
 
-        {/* Overlay para contraste do texto */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent" />
+        {/* Sem overlay escuro para manter o fundo claro como no layout de referência */}
 
         {/* Conteúdo */}
         <div className="relative z-10 mx-auto w-full max-w-[1400px] px-4 md:px-8 py-12 md:py-20">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-            {/* Imagem da mulher - direita no desktop, acima do texto no mobile */}
-            <div className="order-1 md:order-2 flex justify-center md:justify-end">
-              <div className="relative z-20">
-                <Image
-                  src="/mulher-sessao2.png"
-                  alt="Profissional de contabilidade"
-                  width={640}
-                  height={800}
-                  priority
-                  className="w-[70%] max-w-[360px] md:w-[90%] md:max-w-[520px] h-auto object-contain"
-                />
-              </div>
+            {/* Imagem da mulher - somente no mobile dentro do fluxo */}
+            <div className="order-1 md:order-2 flex justify-center md:hidden">
+              <Image
+                src="/fernanda.png"
+                alt="Profissional de contabilidade"
+                width={640}
+                height={800}
+                priority
+                className="w-[82%] max-w-[440px] h-auto object-contain"
+              />
             </div>
 
             {/* Texto - esquerda no desktop, abaixo no mobile */}
             <div className="order-2 md:order-1">
-              <h1 className="text-3xl md:text-5xl font-bold leading-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight max-w-2xl">
                 Soluções contábeis completas para sua empresa crescer com segurança
               </h1>
-              <p className="mt-4 text-blue-50/90 md:text-lg max-w-xl">
+              <p className="mt-4 text-slate-700 md:text-lg max-w-xl">
                 Confiança, precisão e agilidade para apoiar as decisões do seu negócio.
               </p>
             </div>
           </div>
+        </div>
+
+        {/* Imagem da mulher - desktop absoluto ancorado no limite inferior da seção */}
+        <div className="hidden md:block absolute right-0 bottom-0 z-20">
+          <Image
+            src="/fernanda.png"
+            alt="Profissional de contabilidade"
+            width={800}
+            height={1000}
+            priority
+            className="w-[520px] lg:w-[640px] xl:w-[720px] h-auto object-contain"
+          />
         </div>
 
         {/* Gráficos no canto inferior esquerdo, por trás da mulher */}
@@ -60,7 +70,7 @@ export default function Home() {
           <div className="relative h-full w-full max-w-[1400px] mx-auto">
             <div className="absolute left-0 bottom-0 z-10 opacity-90">
               <Image
-                src="/grafico.png"
+                src="/graficocolorido.png"
                 alt="Gráfico"
                 width={220}
                 height={120}
@@ -69,6 +79,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+
       </section>
 
     </main>
