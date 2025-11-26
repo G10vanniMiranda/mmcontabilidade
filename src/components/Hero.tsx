@@ -55,7 +55,7 @@ export default function Hero() {
                 transition={{ duration: 1 }}
             >
                 <Image
-                    src="/fernanda.png"
+                    src="/fernanda.JPG"
                     alt="Profissional da contabilidade"
                     width={520}
                     height={520}
