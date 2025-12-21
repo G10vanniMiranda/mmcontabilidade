@@ -1,11 +1,17 @@
-import Hero from "@/components/Hero";
-import Services from "@/components/Services";
+import { About } from '@/components/About'
+import { Contact } from '@/components/Contact'
+import { Differentials } from '@/components/Differentials'
+import Hero from '@/components/Hero'
+import Services from '@/components/Services'
 
 export default function Home() {
   return (
-    <main>
+    <main className="w-full">
       <Hero />
       <Services />
+      <Differentials />
+      <About />
+      <Contact />
     </main>
-  );
+  )
 }
