@@ -1,5 +1,6 @@
 'use client'
 import Link from 'next/link'
+import type { FormEvent } from 'react'
 import { motion } from 'framer-motion'
 import { MapPin, Phone, Mail, MessageCircle } from 'lucide-react'
 
@@ -9,6 +10,32 @@ const ADDRESS = 'Rua Tencredo Neves, 4002'
 const EMAIL = 'edermirandacontabilidade@gmail.com'
 
 export const Contact = () => {
+    const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+        event.preventDefault()
+
+        const formData = new FormData(event.currentTarget)
+        const name = String(formData.get('name') ?? '').trim()
+        const phone = String(formData.get('phone') ?? '').trim()
+        const email = String(formData.get('email') ?? '').trim()
+        const message = String(formData.get('message') ?? '').trim()
+
+        const text = [
+            'Olá! Gostaria de entrar em contato com a MM Contabilidade.',
+            name && `Nome: ${name}`,
+            phone && `WhatsApp: ${phone}`,
+            email && `E-mail: ${email}`,
+            message && `Mensagem: ${message}`,
+        ]
+            .filter(Boolean)
+            .join('\n')
+
+        window.open(
+            `https://wa.me/${PHONE_WA}?text=${encodeURIComponent(text)}`,
+            '_blank',
+            'noopener,noreferrer'
+        )
+    }
+
     return (
         <section
             id="contato"
@@ -147,7 +174,7 @@ export const Contact = () => {
                                 Preencha os campos e retornaremos o mais rápido possível.
                             </p>
 
-                            <form className="grid gap-4">
+                            <form className="grid gap-4" onSubmit={handleSubmit}>
                                 <input
                                     className="w-full rounded-lg border border-blue-100 bg-white px-4 py-3 outline-none focus:ring-2 focus:ring-blue-200"
                                     placeholder="Seu nome"
@@ -171,8 +198,8 @@ export const Contact = () => {
                                 />
 
                                 <button
-                                    type="button"
-                                    className="bg-blue-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-blue-700 transition shadow-lg hover:shadow-blue-300/40 cursor-pointer"
+                                    type="submit"
+                                    className="bg-blue-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-blue-700 transition shadow-lg hover:shadow-blue-300/40"
                                 >
                                     Enviar mensagem
                                 </button>

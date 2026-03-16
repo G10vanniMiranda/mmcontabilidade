@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+button {
+    cursor: pointer;
+}
+
 .btn-css{
     padding: 10px 50px; 
     margin-right: 3px; 

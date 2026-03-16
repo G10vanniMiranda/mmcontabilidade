@@ -6,10 +6,10 @@ import { useState } from 'react'
 import { HiOutlineMenu, HiOutlineX } from 'react-icons/hi'
 
 const NAV = [
-    { href: '#servicos', label: 'Serviços' },
-    { href: '#diferenciais', label: 'Diferenciais' },
-    { href: '#sobre', label: 'Sobre Nós' },
-    { href: '#contato', label: 'Localização' }, // <- corrigido
+    { href: '/#servicos', label: 'Serviços' },
+    { href: '/#diferenciais', label: 'Diferenciais' },
+    { href: '/#sobre', label: 'Sobre Nós' },
+    { href: '/#contato', label: 'Localização' },
 ]
 
 export default function Header() {
@@ -19,12 +19,11 @@ export default function Header() {
     const close = () => setOpen(false)
 
     return (
-        <header className="fixed inset-x-0 top-0 z-50 bg-black text-white border-b border-white/10">
+        <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-black text-white">
             <div className="mx-auto w-full max-w-[1400px] px-3 md:px-6">
-                <div className="relative h-11 md:h-16 flex items-center justify-between">
-                    {/* logo */}
+                <div className="relative flex h-11 items-center justify-between md:h-16">
                     <Link
-                        href="#hero"
+                        href="/#hero"
                         aria-label="MM Contabilidade - Início"
                         className="shrink-0 flex items-center"
                         onClick={close}
@@ -39,8 +38,7 @@ export default function Header() {
                         />
                     </Link>
 
-                    {/* desktop nav */}
-                    <nav className="hidden md:flex items-center gap-6">
+                    <nav className="hidden items-center gap-6 md:flex">
                         {NAV.map((item) => (
                             <Link
                                 key={item.href}
@@ -52,17 +50,16 @@ export default function Header() {
                         ))}
 
                         <Link
-                            href="#contato"
+                            href="/#contato"
                             className="inline-flex items-center justify-center rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700"
                         >
                             Entrar em contato
                         </Link>
                     </nav>
 
-                    {/* mobile button */}
                     <button
                         type="button"
-                        className="md:hidden inline-flex h-8 w-8 items-center justify-center rounded-md border border-white/15 hover:bg-white/5"
+                        className="inline-flex h-8 w-8 items-center justify-center rounded-md border border-white/15 hover:bg-white/5 md:hidden"
                         aria-expanded={open}
                         aria-label={open ? 'Fechar menu' : 'Abrir menu'}
                         onClick={toggle}
@@ -70,13 +67,12 @@ export default function Header() {
                         {open ? <HiOutlineX className="h-5 w-5" /> : <HiOutlineMenu className="h-5 w-5" />}
                     </button>
 
-                    {/* mobile dropdown */}
                     <div
-                        className={`md:hidden absolute left-0 right-0 top-full transition-all duration-200 ${open ? 'opacity-100 translate-y-0' : 'pointer-events-none opacity-0 -translate-y-1'
+                        className={`absolute left-0 right-0 top-full transition-all duration-200 md:hidden ${open ? 'translate-y-0 opacity-100' : 'pointer-events-none -translate-y-1 opacity-0'
                             }`}
                     >
-                        <div className="bg-black border-t border-white/10">
-                            <nav className="px-3 py-2 space-y-1">
+                        <div className="border-t border-white/10 bg-black">
+                            <nav className="space-y-1 px-3 py-2">
                                 {NAV.map((item) => (
                                     <Link
                                         key={item.href}
@@ -89,7 +85,7 @@ export default function Header() {
                                 ))}
 
                                 <Link
-                                    href="#contato"
+                                    href="/#contato"
                                     className="block rounded-md bg-blue-600 px-3 py-2 text-center text-sm font-semibold text-white hover:bg-blue-700"
                                     onClick={close}
                                 >

@@ -6,12 +6,10 @@ export default function Footer() {
     const year = new Date().getFullYear()
 
     return (
-        <footer className="bg-blue-900 text-white border-t border-white/10">
-            <div className="mx-auto w-full max-w-[1400px] px-4 md:px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
-
-                {/* Brand */}
+        <footer className="border-t border-white/10 bg-blue-900 text-white">
+            <div className="mx-auto flex w-full max-w-[1400px] flex-col items-center justify-between gap-4 px-4 py-6 md:flex-row md:px-6">
                 <div className="text-center md:text-left">
-                    <h3 className="font-semibold text-sm md:text-base leading-none">
+                    <h3 className="text-sm font-semibold leading-none md:text-base">
                         MM Contabilidade
                     </h3>
                     <p className="mt-1 text-xs text-white/80">
@@ -19,25 +17,23 @@ export default function Footer() {
                     </p>
                 </div>
 
-                {/* Desktop nav */}
-                <nav className="hidden md:flex items-center gap-6 text-sm">
-                    <Link href="#servicos" className="hover:underline">
+                <nav className="hidden items-center gap-6 text-sm md:flex">
+                    <Link href="/#servicos" className="hover:underline">
                         Serviços
                     </Link>
-                    <Link href="#sobre" className="hover:underline">
+                    <Link href="/#sobre" className="hover:underline">
                         Sobre
                     </Link>
-                    <Link href="#contato" className="hover:underline font-semibold">
+                    <Link href="/#contato" className="font-semibold hover:underline">
                         Contato
                     </Link>
                 </nav>
 
-                {/* Mobile nav */}
-                <nav className="md:hidden flex gap-4 text-xs">
-                    <Link href="#servicos" className="hover:underline">
+                <nav className="flex gap-4 text-xs md:hidden">
+                    <Link href="/#servicos" className="hover:underline">
                         Serviços
                     </Link>
-                    <Link href="#contato" className="hover:underline font-semibold">
+                    <Link href="/#contato" className="font-semibold hover:underline">
                         Contato
                     </Link>
                 </nav>
