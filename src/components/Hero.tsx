@@ -37,12 +37,20 @@ export default function Hero() {
                         <p className="mx-auto max-w-md text-lg text-gray-700 md:mx-0">
                             MM Contabilidade une tecnologia e experiência para simplificar sua gestão contábil, fiscal e empresarial.
                         </p>
-                        <Link
-                            href="#contato"
-                            className="inline-flex items-center justify-center rounded-md bg-blue-600 px-8 py-3 text-lg font-semibold text-white shadow-lg transition-all hover:bg-blue-700 hover:shadow-blue-300/40"
-                        >
-                            Fale com um Especialista
-                        </Link>
+                        <div className="flex flex-col items-center gap-3 sm:flex-row md:items-start">
+                            <Link
+                                href="/imposto-de-renda"
+                                className="inline-flex items-center justify-center rounded-md border border-blue-200 bg-white px-8 py-3 text-lg font-semibold text-blue-900 shadow-sm transition-all hover:border-blue-300 hover:bg-blue-50"
+                            >
+                                Imposto de Renda
+                            </Link>
+                            <Link
+                                href="#contato"
+                                className="inline-flex items-center justify-center rounded-md bg-blue-600 px-8 py-3 text-lg font-semibold text-white shadow-lg transition-all hover:bg-blue-700 hover:shadow-blue-300/40"
+                            >
+                                Fale com um Especialista
+                            </Link>
+                        </div>
                     </div>
 
                     <motion.div

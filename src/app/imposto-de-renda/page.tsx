@@ -1,27 +1,79 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { CheckCircle2, Clock3, MessageCircle, ShieldCheck } from 'lucide-react'
+import { CheckCircle2, Clock3, Mail, MapPin, MessageCircle, Phone, ShieldCheck } from 'lucide-react'
 
 const PHONE_WA = '5569984069935'
+const PHONE_DISPLAY = '(69) 98406-9935'
+const ADDRESS = 'Rua Tencredo Neves, 4002'
+const EMAIL = 'edermirandacontabilidade@gmail.com'
 const message = encodeURIComponent(
     'Olá! Quero atendimento para declaração de Imposto de Renda.'
 )
 
 export const metadata: Metadata = {
     title: 'Imposto de Renda | MM Contabilidade',
-    description: 'Página de atendimento para declaração de Imposto de Renda com contato rápido pelo WhatsApp.',
+    description:
+        'Atendimento para declaração de Imposto de Renda com orientação clara, contato rápido no WhatsApp e suporte da MM Contabilidade.',
+    openGraph: {
+        title: 'Imposto de Renda | MM Contabilidade',
+        description:
+            'Fale com a MM Contabilidade e receba orientação para declarar seu Imposto de Renda com mais segurança e agilidade.',
+        type: 'website',
+    },
 }
 
 const benefits = [
-    'Atendimento direto e sem complicação',
-    'Análise para evitar erros e pendências',
-    'Suporte para declaração simples ou mais completa',
+    'Atendimento direto para pessoa física e casos mais completos',
+    'Orientação sobre documentos, pendências e próximos passos',
+    'Suporte para reduzir erros e evitar retrabalho na declaração',
 ]
 
 const steps = [
-    'Você envia uma mensagem no WhatsApp.',
-    'Recebe a orientação sobre documentos e próximos passos.',
-    'Seguimos com o atendimento da sua declaração.',
+    'Você chama no WhatsApp e informa seu caso.',
+    'Recebe a orientação inicial sobre documentos e atendimento.',
+    'Seguimos com o processo da sua declaração com mais segurança.',
+]
+
+const reasons = [
+    {
+        icon: ShieldCheck,
+        title: 'Mais segurança',
+        description: 'Análise cuidadosa para reduzir erros, inconsistências e pendências na declaração.',
+    },
+    {
+        icon: Clock3,
+        title: 'Atendimento ágil',
+        description: 'Você entende rapidamente o que precisa enviar e como iniciar seu atendimento.',
+    },
+    {
+        icon: CheckCircle2,
+        title: 'Orientação clara',
+        description: 'Explicamos o processo de forma simples, objetiva e sem excesso de informação.',
+    },
+]
+
+const contactItems = [
+    {
+        icon: Phone,
+        label: 'WhatsApp',
+        value: PHONE_DISPLAY,
+        href: `https://wa.me/${PHONE_WA}?text=${message}`,
+        valueClassName: '',
+    },
+    {
+        icon: Mail,
+        label: 'E-mail',
+        value: EMAIL,
+        href: `mailto:${EMAIL}`,
+        valueClassName: 'truncate whitespace-nowrap text-base sm:text-lg',
+    },
+    {
+        icon: MapPin,
+        label: 'Endereço',
+        value: ADDRESS,
+        href: 'https://www.google.com/maps?q=Rua%20Tencredo%20Neves,%204002',
+        valueClassName: '',
+    },
 ]
 
 export default function ImpostoDeRendaPage() {
@@ -36,53 +88,49 @@ export default function ImpostoDeRendaPage() {
                         <span className="inline-flex rounded-full border border-blue-200 bg-white px-4 py-2 text-sm font-medium text-blue-700">
                             Atendimento para Imposto de Renda
                         </span>
-                        <h1 className="mt-6 text-4xl font-extrabold leading-tight text-blue-950 md:text-6xl">
-                            Declare seu Imposto de Renda com orientação clara e sem excesso de informação.
+                        <h1 className="mx-auto mt-6 w-full max-w-[320px] text-3xl font-extrabold leading-[1.12] tracking-[-0.02em] text-blue-950 sm:max-w-[14ch] sm:text-5xl md:max-w-none md:text-6xl">
+                            Declare seu Imposto de Renda com orientação clara e atendimento rápido.
                         </h1>
-                        <p className="mx-auto mt-6 max-w-2xl text-lg text-slate-600">
-                            Uma página objetiva para quem só quer resolver isso rápido: fale com a MM Contabilidade e receba o atendimento pelo WhatsApp.
+                        <p className="mx-auto mt-6 w-full max-w-[320px] text-base leading-8 text-slate-600 sm:max-w-2xl sm:text-lg">
+                            Fale com a MM Contabilidade para entender o que precisa, organizar seus documentos e iniciar seu atendimento sem complicação.
                         </p>
 
                         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
                             <Link
                                 href={`https://wa.me/${PHONE_WA}?text=${message}`}
                                 target="_blank"
-                                className="inline-flex min-w-[260px] items-center justify-center gap-2 rounded-xl bg-blue-600 px-8 py-4 text-lg font-semibold text-white shadow-lg transition hover:bg-blue-700 hover:shadow-blue-300/40"
+                                className="inline-flex w-full max-w-[320px] items-center justify-center gap-2 rounded-xl bg-blue-600 px-8 py-4 text-lg font-semibold text-white shadow-lg transition hover:bg-blue-700 hover:shadow-blue-300/40 sm:w-auto sm:min-w-[260px] sm:max-w-none"
                             >
                                 <MessageCircle className="h-5 w-5" />
                                 Mandar mensagem agora
                             </Link>
                             <Link
-                                href="/#contato"
-                                className="inline-flex min-w-[220px] items-center justify-center rounded-xl border border-blue-200 bg-white px-8 py-4 text-lg font-semibold text-blue-700 transition hover:border-blue-300 hover:bg-blue-50"
+                                href={`tel:${PHONE_DISPLAY.replace(/\D/g, '')}`}
+                                className="inline-flex w-full max-w-[320px] items-center justify-center rounded-xl border border-blue-200 bg-white px-8 py-4 text-lg font-semibold text-blue-700 transition hover:border-blue-300 hover:bg-blue-50 sm:w-auto sm:min-w-[260px] sm:max-w-none"
                             >
-                                Ver contato
+                                Ligar agora
                             </Link>
+                        </div>
+
+                        <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-slate-600">
+                            <span>WhatsApp: {PHONE_DISPLAY}</span>
+                            <span>Porto Velho - RO</span>
+                            <span>Atendimento claro e direto</span>
                         </div>
                     </div>
 
                     <div className="mt-14 grid gap-6 md:grid-cols-3">
-                        <div className="rounded-2xl border border-blue-100 bg-white p-6 shadow-sm">
-                            <ShieldCheck className="h-8 w-8 text-blue-600" />
-                            <h2 className="mt-4 text-lg font-bold text-blue-950">Atendimento seguro</h2>
-                            <p className="mt-2 text-slate-600">
-                                Suporte profissional para reduzir riscos de erro e retrabalho na declaração.
-                            </p>
-                        </div>
-                        <div className="rounded-2xl border border-blue-100 bg-white p-6 shadow-sm">
-                            <Clock3 className="h-8 w-8 text-blue-600" />
-                            <h2 className="mt-4 text-lg font-bold text-blue-950">Sem enrolação</h2>
-                            <p className="mt-2 text-slate-600">
-                                A página foi feita para conversão: entender rápido, clicar e iniciar o atendimento.
-                            </p>
-                        </div>
-                        <div className="rounded-2xl border border-blue-100 bg-white p-6 shadow-sm">
-                            <CheckCircle2 className="h-8 w-8 text-blue-600" />
-                            <h2 className="mt-4 text-lg font-bold text-blue-950">Orientação clara</h2>
-                            <p className="mt-2 text-slate-600">
-                                Você recebe o direcionamento sobre documentos, prazo e próximos passos.
-                            </p>
-                        </div>
+                        {reasons.map((item) => {
+                            const Icon = item.icon
+
+                            return (
+                                <div key={item.title} className="rounded-2xl border border-blue-100 bg-white p-6 shadow-sm">
+                                    <Icon className="h-8 w-8 text-blue-600" />
+                                    <h2 className="mt-4 text-lg font-bold text-blue-950">{item.title}</h2>
+                                    <p className="mt-2 text-slate-600">{item.description}</p>
+                                </div>
+                            )
+                        })}
                     </div>
                 </div>
             </section>
@@ -91,7 +139,7 @@ export default function ImpostoDeRendaPage() {
                 <div className="mx-auto grid max-w-5xl gap-8 rounded-3xl border border-blue-100 bg-white p-8 shadow-sm md:grid-cols-2 md:p-10">
                     <div>
                         <h2 className="text-3xl font-bold text-blue-950">
-                            O que você encontra aqui
+                            Como podemos ajudar
                         </h2>
                         <div className="mt-6 space-y-4">
                             {benefits.map((benefit) => (
@@ -121,13 +169,40 @@ export default function ImpostoDeRendaPage() {
                 </div>
             </section>
 
+            <section className="px-6 pb-16 md:px-12">
+                <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-3">
+                    {contactItems.map((item) => {
+                        const Icon = item.icon
+
+                        return (
+                            <Link
+                                key={item.label}
+                                href={item.href}
+                                target={item.href.startsWith('http') ? '_blank' : undefined}
+                                className="min-w-0 rounded-2xl border border-blue-100 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+                            >
+                                <Icon className="h-7 w-7 text-blue-600" />
+                                <p className="mt-4 text-sm font-semibold uppercase tracking-[0.08em] text-slate-500">
+                                    {item.label}
+                                </p>
+                                <p
+                                    className={`mt-2 text-lg font-semibold text-blue-950 ${item.valueClassName ?? ''}`}
+                                >
+                                    {item.value}
+                                </p>
+                            </Link>
+                        )
+                    })}
+                </div>
+            </section>
+
             <section className="px-6 pb-20 md:px-12">
                 <div className="mx-auto max-w-4xl rounded-3xl bg-blue-950 px-8 py-12 text-center text-white shadow-xl md:px-12">
                     <h2 className="text-3xl font-bold md:text-4xl">
                         Precisa declarar seu Imposto de Renda?
                     </h2>
                     <p className="mx-auto mt-4 max-w-2xl text-base text-blue-100 md:text-lg">
-                        Entre na conversa agora e receba o direcionamento para começar seu atendimento.
+                        Entre em contato agora e receba o direcionamento inicial para começar seu atendimento.
                     </p>
                     <Link
                         href={`https://wa.me/${PHONE_WA}?text=${message}`}
