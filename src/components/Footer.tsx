@@ -42,7 +42,7 @@ export default function Footer() {
 
     return (
         <footer className="border-t border-blue-100 bg-slate-950 text-white">
-            <div className="mx-auto grid w-full max-w-[1400px] gap-12 px-6 py-14 md:grid-cols-[1.2fr_0.8fr_1fr] md:px-8">
+            <div className="mx-auto grid w-full max-w-[1400px] gap-12 px-6 py-14 md:grid-cols-2 md:px-8 lg:grid-cols-[1.2fr_0.8fr_1fr]">
                 <div className="max-w-md">
                     <Link href="/#hero" aria-label="MM Contabilidade - Início" className="inline-flex items-center">
                         <Image
@@ -71,7 +71,7 @@ export default function Footer() {
                     </Link>
                 </div>
 
-                <div>
+                <div className="md:col-span-2 lg:col-span-1">
                     <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-slate-400">
                         Navegação
                     </h3>

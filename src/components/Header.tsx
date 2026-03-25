@@ -39,7 +39,7 @@ export default function Header() {
                         />
                     </Link>
 
-                    <nav className="hidden items-center gap-6 md:flex">
+                    <nav className="hidden items-center gap-6 lg:flex">
                         {NAV.map((item) => (
                             <Link
                                 key={item.href}
@@ -60,7 +60,7 @@ export default function Header() {
 
                     <button
                         type="button"
-                        className="inline-flex h-8 w-8 items-center justify-center rounded-md border border-white/15 hover:bg-white/5 md:hidden"
+                        className="inline-flex h-8 w-8 items-center justify-center rounded-md border border-white/15 hover:bg-white/5 lg:hidden"
                         aria-expanded={open}
                         aria-label={open ? 'Fechar menu' : 'Abrir menu'}
                         onClick={toggle}
@@ -69,7 +69,7 @@ export default function Header() {
                     </button>
 
                     <div
-                        className={`absolute left-0 right-0 top-full transition-all duration-200 md:hidden ${
+                        className={`absolute left-0 right-0 top-full transition-all duration-200 lg:hidden ${
                             open ? 'translate-y-0 opacity-100' : 'pointer-events-none -translate-y-1 opacity-0'
                         }`}
                     >

@@ -65,7 +65,7 @@ const contactItems = [
         label: 'E-mail',
         value: EMAIL,
         href: `mailto:${EMAIL}`,
-        valueClassName: 'truncate whitespace-nowrap text-base sm:text-lg',
+        valueClassName: 'overflow-x-auto whitespace-nowrap text-[15px] sm:text-lg',
     },
     {
         icon: MapPin,
