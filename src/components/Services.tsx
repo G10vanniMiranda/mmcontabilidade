@@ -17,27 +17,27 @@ const services: ServiceItem[] = [
   {
     icon: <LuBriefcase size={40} />,
     title: 'Contabilidade Empresarial',
-    desc: 'Gestao completa da contabilidade do seu negocio com seguranca e transparencia.',
+    desc: 'Gestão completa da contabilidade do seu negócio com segurança e transparência.',
   },
   {
     icon: <LuFileText size={40} />,
     title: 'Abertura de Empresa',
-    desc: 'Orientacao e execucao de todos os processos legais para abrir sua empresa do zero.',
+    desc: 'Orientação e execução de todos os processos legais para abrir sua empresa do zero.',
   },
   {
     icon: <AiOutlineBarChart size={40} />,
     title: 'Consultoria Fiscal',
-    desc: 'Analise tributaria estrategica para reduzir custos e aumentar sua eficiencia fiscal.',
+    desc: 'Análise tributária estratégica para reduzir custos e aumentar sua eficiência fiscal.',
   },
   {
     icon: <LuUsers size={40} />,
     title: 'Folha de Pagamento',
-    desc: 'Calculos, encargos e obrigacoes trabalhistas organizadas de forma pratica e segura.',
+    desc: 'Cálculos, encargos e obrigações trabalhistas organizadas de forma prática e segura.',
   },
   {
     icon: <LuCoins size={40} />,
     title: 'Imposto de Renda',
-    desc: 'Declaracao de IRPF e IRPJ com precisao, evitando erros e garantindo conformidade.',
+    desc: 'Declaração de IRPF e IRPJ com precisão, evitando erros e garantindo conformidade.',
     href: '/imposto-de-renda',
   },
 ];
@@ -89,7 +89,7 @@ export default function Services() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          Nossos Servicos
+          Nossos Serviços
         </motion.h2>
         <motion.p
           className="mx-auto mb-16 max-w-2xl text-gray-700"
@@ -98,7 +98,7 @@ export default function Services() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          Oferecemos solucoes contabeis completas para empresas que buscam inovacao, eficiencia e seguranca.
+          Oferecemos soluções contábeis completas para empresas que buscam inovação, eficiência e segurança.
         </motion.p>
 
         <motion.div
@@ -112,11 +112,9 @@ export default function Services() {
             <motion.div
               key={index}
               variants={itemVariants}
-              className={`group relative flex flex-col items-center overflow-hidden rounded-2xl border border-blue-100 bg-white/80 p-8 text-center shadow-lg backdrop-blur-sm md:col-span-1 lg:col-span-2 ${
-                index >= 3 ? 'lg:col-start-2' : ''
-              } ${
-                index === 4 ? 'lg:col-start-4' : ''
-              }`}
+              className={`group relative flex flex-col items-center overflow-hidden rounded-2xl border border-blue-100 bg-white/80 p-8 text-center shadow-lg backdrop-blur-sm md:col-span-1 lg:col-span-2 ${index >= 3 ? 'lg:col-start-2' : ''
+                } ${index === 4 ? 'lg:col-start-4' : ''
+                }`}
               whileHover={{ y: -10, rotateX: 2, rotateY: index % 2 === 0 ? -2 : 2 }}
               transition={{ type: 'spring', stiffness: 180, damping: 18 }}
             >

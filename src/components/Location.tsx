@@ -25,7 +25,7 @@ export const Location = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
                     >
-                        Localizacao
+                        Localização
                     </motion.h2>
                     <motion.p
                         className="mx-auto max-w-2xl text-gray-700"
@@ -34,7 +34,7 @@ export const Location = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.08 }}
                     >
-                        Veja onde estamos e encontre o melhor caminho para chegar ate a MM Contabilidade.
+                        Veja onde estamos e encontre o melhor caminho para chegar até a MM Contabilidade.
                     </motion.p>
                 </div>
 

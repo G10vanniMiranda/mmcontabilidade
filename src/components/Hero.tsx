@@ -43,9 +43,9 @@ export default function Hero() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.08 }}
                         >
-                            Solucoes Contabeis Inteligentes
+                            Soluções Contábeis Inteligentes
                             <br />
-                            para sua Empresa Crescer com Seguranca
+                            para sua Empresa Crescer com Segurança
                         </motion.h1>
                         <motion.p
                             className="mx-auto max-w-md text-lg text-gray-700 md:mx-0"
@@ -53,7 +53,7 @@ export default function Hero() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.16 }}
                         >
-                            MM Contabilidade une tecnologia e experiencia para simplificar sua gestao contabil, fiscal e empresarial.
+                            MM Contabilidade une tecnologia e experiência para simplificar sua gestão contábil, fiscal e empresarial.
                         </motion.p>
                         <motion.div
                             className="flex w-full flex-col items-center gap-3 sm:w-auto sm:flex-row md:items-start"

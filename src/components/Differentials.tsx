@@ -5,18 +5,18 @@ import { ShieldCheck, Cpu, Headset } from 'lucide-react'
 const items = [
     {
         icon: <ShieldCheck size={42} />,
-        title: 'Seguranca e Conformidade',
-        desc: 'Atuamos com total conformidade legal e rigor tecnico para garantir tranquilidade e protecao ao seu negocio.',
+        title: 'Segurança e Conformidade',
+        desc: 'Atuamos com total conformidade legal e rigor técnico para garantir tranquilidade e proteção ao seu negócio.',
     },
     {
         icon: <Cpu size={42} />,
-        title: 'Tecnologia e Inovacao',
-        desc: 'Utilizamos processos modernos, automacao e inteligencia contabil para gerar eficiencia e clareza.',
+        title: 'Tecnologia e Inovação',
+        desc: 'Utilizamos processos modernos, automação e inteligência contábil para gerar eficiência e clareza.',
     },
     {
         icon: <Headset size={42} />,
         title: 'Atendimento Personalizado',
-        desc: 'Cada cliente e unico. Nosso suporte e humano, proximo e focado nas necessidades reais da sua empresa.',
+        desc: 'Cada cliente é único. Nosso suporte é humano, próximo e focado nas necessidades reais da sua empresa.',
     },
 ]
 
@@ -67,7 +67,7 @@ export const Differentials = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.08 }}
                 >
-                    Unimos conhecimento tecnico, tecnologia e atendimento estrategico para entregar muito mais do que contabilidade.
+                    Unimos conhecimento técnico, tecnologia e atendimento estratégico para entregar muito mais do que contabilidade.
                 </motion.p>
 
                 <motion.div
