@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
+import Script from 'next/script'
 
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
-import { defaultOgImage, siteConfig, siteUrl } from '@/lib/site'
+import { defaultOgImage, googleAnalyticsId, googleSiteVerification, siteConfig, siteUrl } from '@/lib/site'
 import './globals.css'
 
 const geistSans = Geist({
@@ -62,6 +63,10 @@ export const metadata: Metadata = {
         },
     },
     category: 'business',
+    verification: {
+        google: googleSiteVerification,
+    },
+    manifest: '/manifest.webmanifest',
 }
 
 export default function RootLayout({
@@ -93,6 +98,22 @@ export default function RootLayout({
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
                 />
+                {googleAnalyticsId ? (
+                    <>
+                        <Script
+                            src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`}
+                            strategy="afterInteractive"
+                        />
+                        <Script id="google-analytics" strategy="afterInteractive">
+                            {`
+                                window.dataLayer = window.dataLayer || [];
+                                function gtag(){dataLayer.push(arguments);}
+                                gtag('js', new Date());
+                                gtag('config', '${googleAnalyticsId}');
+                            `}
+                        </Script>
+                    </>
+                ) : null}
                 <Header />
                 <div className="flex min-h-screen w-full flex-col justify-center pt-11 md:pt-16">
                     {children}

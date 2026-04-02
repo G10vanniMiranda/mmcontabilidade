@@ -1,4 +1,4 @@
-const fallbackSiteUrl = 'http://localhost:3000'
+const fallbackSiteUrl = 'https://mmcontabilidadeltda.com.br'
 
 function normalizeSiteUrl(url: string) {
     return url.endsWith('/') ? url.slice(0, -1) : url
@@ -32,3 +32,5 @@ export const siteConfig = {
 } as const
 
 export const defaultOgImage = `${siteUrl}/logo.png`
+export const googleAnalyticsId = process.env.NEXT_PUBLIC_GA_ID
+export const googleSiteVerification = process.env.GOOGLE_SITE_VERIFICATION
