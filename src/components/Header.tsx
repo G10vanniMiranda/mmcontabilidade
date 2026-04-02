@@ -22,7 +22,7 @@ export default function Header() {
 
     return (
         <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-black text-white">
-            <div className="mx-auto w-full max-w-[1400px] px-3 md:px-6">
+            <div className="mx-auto w-full max-w-7xl px-6 md:px-12">
                 <div className="relative flex h-11 items-center justify-between md:h-16">
                     <Link
                         href="/#hero"

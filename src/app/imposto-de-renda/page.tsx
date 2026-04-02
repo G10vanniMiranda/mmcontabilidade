@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { CheckCircle2, Clock3, Mail, MapPin, MessageCircle, Phone, ShieldCheck } from 'lucide-react'
 
+import { defaultOgImage } from '@/lib/site'
+
 const PHONE_WA = '5569984069935'
 const PHONE_DISPLAY = '(69) 98406-9935'
 const ADDRESS = 'Rua Tencredo Neves, 4002'
@@ -11,14 +13,26 @@ const message = encodeURIComponent(
 )
 
 export const metadata: Metadata = {
-    title: 'Imposto de Renda | MM Contabilidade',
+    title: 'Imposto de Renda',
     description:
         'Atendimento para declaração de Imposto de Renda com orientação clara, contato rápido no WhatsApp e suporte da MM Contabilidade.',
+    keywords: ['imposto de renda em Porto Velho', 'declaracao de imposto de renda', 'contador imposto de renda'],
+    alternates: {
+        canonical: '/imposto-de-renda',
+    },
     openGraph: {
         title: 'Imposto de Renda | MM Contabilidade',
         description:
             'Fale com a MM Contabilidade e receba orientação para declarar seu Imposto de Renda com mais segurança e agilidade.',
         type: 'website',
+        url: '/imposto-de-renda',
+        images: [defaultOgImage],
+    },
+    twitter: {
+        title: 'Imposto de Renda | MM Contabilidade',
+        description:
+            'Fale com a MM Contabilidade e receba orientação para declarar seu Imposto de Renda com mais segurança e agilidade.',
+        images: [defaultOgImage],
     },
 }
 
