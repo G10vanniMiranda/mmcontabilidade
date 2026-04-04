@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import type { FormEvent } from 'react'
-import { motion } from 'framer-motion'
+import { motion } from 'motion/react'
 import { Mail, MapPin, MessageCircle, Phone } from 'lucide-react'
 
 const PHONE_DISPLAY = '(69) 98406-9935'
@@ -71,7 +71,8 @@ export const Contact = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.08 }}
                     >
-                        Fale com a MM Contabilidade e receba orientação clara, rápida e segura para o seu negócio.
+                        Fale com a MM Contabilidade e receba orientação clara, rápida e segura para o seu
+                        negócio.
                     </motion.p>
                 </div>
 

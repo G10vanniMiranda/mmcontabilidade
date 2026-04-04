@@ -2,9 +2,9 @@
 
 import Link from 'next/link';
 import React from 'react';
-import { motion } from 'framer-motion';
-import { LuBriefcase, LuFileText, LuUsers, LuCoins } from 'react-icons/lu';
+import { motion } from 'motion/react';
 import { AiOutlineBarChart } from 'react-icons/ai';
+import { LuBriefcase, LuCoins, LuFileText, LuUsers } from 'react-icons/lu';
 
 interface ServiceItem {
   icon: React.ReactElement;
@@ -71,7 +71,7 @@ export default function Services() {
       className="relative overflow-hidden bg-gradient-to-b from-white via-blue-50 to-white px-6 py-28 md:px-12"
     >
       <motion.div
-        className="absolute -top-40 right-0 h-[500px] w-[500px] rounded-full bg-blue-500/20 blur-[160px]"
+        className="absolute right-0 top-40 h-[500px] w-[500px] rounded-full bg-blue-500/20 blur-[160px]"
         animate={{ x: [0, 30, -30, 0], y: [0, 20, -20, 0] }}
         transition={{ duration: 14, repeat: Infinity, ease: 'easeInOut' }}
       />
@@ -98,7 +98,8 @@ export default function Services() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          Oferecemos soluções contábeis completas para empresas que buscam inovação, eficiência e segurança.
+          Oferecemos soluções contábeis completas para empresas que buscam inovação,
+          eficiência e segurança.
         </motion.p>
 
         <motion.div

@@ -106,7 +106,8 @@ export default function ImpostoDeRendaPage() {
                             Declare seu Imposto de Renda com orientação clara e atendimento rápido.
                         </h1>
                         <p className="mx-auto mt-6 w-full max-w-[320px] text-base leading-8 text-slate-600 sm:max-w-2xl sm:text-lg">
-                            Fale com a MM Contabilidade para entender o que precisa, organizar seus documentos e iniciar seu atendimento sem complicação.
+                            Fale com a MM Contabilidade para entender o que precisa, organizar seus documentos e
+                            iniciar seu atendimento sem complicação.
                         </p>
 
                         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">

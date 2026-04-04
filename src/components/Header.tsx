@@ -6,12 +6,12 @@ import { useState } from 'react'
 import { HiOutlineMenu, HiOutlineX } from 'react-icons/hi'
 
 const NAV = [
-    { href: '/#servicos', label: 'Servicos' },
+    { href: '/#servicos', label: 'Serviços' },
     { href: '/imposto-de-renda', label: 'Imposto de Renda' },
     { href: '/#diferenciais', label: 'Diferenciais' },
-    { href: '/#sobre', label: 'Sobre Nos' },
+    { href: '/#sobre', label: 'Sobre Nós' },
     { href: '/#contato', label: 'Contato' },
-    { href: '/#localizacao', label: 'Localizacao' },
+    { href: '/#localizacao', label: 'Localização' },
 ]
 
 export default function Header() {
@@ -26,7 +26,7 @@ export default function Header() {
                 <div className="relative flex h-11 items-center justify-between md:h-16">
                     <Link
                         href="/#hero"
-                        aria-label="MM Contabilidade - Inicio"
+                        aria-label="MM Contabilidade - Início"
                         className="flex shrink-0 items-center"
                         onClick={close}
                     >

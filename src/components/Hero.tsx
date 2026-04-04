@@ -1,8 +1,8 @@
 'use client'
 
 import Image from 'next/image'
-import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { motion } from 'motion/react'
 
 export default function Hero() {
     const buttonBaseClassName =
@@ -13,7 +13,7 @@ export default function Hero() {
             <div className="absolute inset-0 bg-gradient-to-br from-white via-blue-50 to-white" />
 
             <motion.div
-                className="absolute -top-40 -left-40 h-[500px] w-[500px] rounded-full bg-blue-500/20 blur-[160px]"
+                className="absolute -left-40 -top-40 h-[500px] w-[500px] rounded-full bg-blue-500/20 blur-[160px]"
                 animate={{
                     x: [0, 40, -40, 0],
                     y: [0, 30, -30, 0],
@@ -53,7 +53,8 @@ export default function Hero() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.16 }}
                         >
-                            MM Contabilidade une tecnologia e experiência para simplificar sua gestão contábil, fiscal e empresarial.
+                            MM Contabilidade une tecnologia e experiência para simplificar sua gestão
+                            contábil, fiscal e empresarial.
                         </motion.p>
                         <motion.div
                             className="flex w-full flex-col items-center gap-3 sm:w-auto sm:flex-row md:items-start"

@@ -1,21 +1,10 @@
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
 import Script from 'next/script'
 
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 import { defaultOgImage, googleAnalyticsId, googleSiteVerification, siteConfig, siteUrl } from '@/lib/site'
 import './globals.css'
-
-const geistSans = Geist({
-    variable: '--font-geist-sans',
-    subsets: ['latin'],
-})
-
-const geistMono = Geist_Mono({
-    variable: '--font-geist-mono',
-    subsets: ['latin'],
-})
 
 export const metadata: Metadata = {
     metadataBase: new URL(siteUrl),
@@ -91,9 +80,7 @@ export default function RootLayout({
 
     return (
         <html lang="pt-BR">
-            <body
-                className={`${geistSans.variable} ${geistMono.variable} overflow-x-hidden overflow-y-auto bg-white text-blue-900 antialiased`}
-            >
+            <body className="overflow-x-hidden overflow-y-auto bg-white font-sans text-blue-900 antialiased">
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}

@@ -1,16 +1,14 @@
 'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
+import { motion } from 'motion/react'
 
 export const About = () => {
     return (
-        <section
-            id="sobre"
-            className="relative overflow-hidden bg-white px-6 py-28 md:px-12"
-        >
+        <section id="sobre" className="relative overflow-hidden bg-white px-6 py-28 md:px-12">
             <motion.div
-                className="absolute -top-40 left-0 h-[500px] w-[500px] rounded-full bg-blue-500/10 blur-[160px]"
+                className="absolute left-0 top-40 h-[500px] w-[500px] rounded-full bg-blue-500/10 blur-[160px]"
                 animate={{ x: [0, 40, -40, 0], y: [0, -20, 20, 0] }}
                 transition={{ duration: 14, repeat: Infinity, ease: 'easeInOut' }}
             />
@@ -39,7 +37,9 @@ export const About = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.08 }}
                     >
-                        A <strong>MM Contabilidade</strong> nasceu com o propósito de ir além do tradicional. Atuamos como parceiros estratégicos das empresas, oferecendo soluções contábeis inteligentes, seguras e alinhadas à realidade do mercado atual.
+                        A <strong>MM Contabilidade</strong> nasceu com o propósito de ir além do tradicional.
+                        Atuamos como parceiros estratégicos das empresas, oferecendo soluções contábeis
+                        inteligentes, seguras e alinhadas à realidade do mercado atual.
                     </motion.p>
 
                     <motion.p
@@ -49,7 +49,8 @@ export const About = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.16 }}
                     >
-                        Unimos experiência técnica, tecnologia e atendimento personalizado para ajudar nossos clientes a crescerem com organização, clareza e tranquilidade fiscal.
+                        Unimos experiência técnica, tecnologia e atendimento personalizado para ajudar nossos
+                        clientes a crescerem com organização, clareza e tranquilidade fiscal.
                     </motion.p>
 
                     <motion.div whileHover={{ y: -4, scale: 1.02 }} whileTap={{ scale: 0.98 }}>

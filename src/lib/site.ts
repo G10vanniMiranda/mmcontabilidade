@@ -10,15 +10,15 @@ export const siteConfig = {
     name: 'MM Contabilidade',
     shortName: 'MM Contabilidade',
     description:
-        'Escritorio de contabilidade em Porto Velho com atendimento para contabilidade empresarial, fiscal, imposto de renda e suporte consultivo.',
+        'Escritório de contabilidade em Porto Velho com atendimento para contabilidade empresarial, fiscal, imposto de renda e suporte consultivo.',
     locale: 'pt_BR',
     keywords: [
         'contabilidade em Porto Velho',
-        'escritorio de contabilidade',
+        'escritório de contabilidade',
         'MM Contabilidade',
         'imposto de renda',
         'contabilidade empresarial',
-        'gestao fiscal',
+        'gestão fiscal',
         'abertura de empresa',
     ],
     phone: '+55 69 98406-9935',

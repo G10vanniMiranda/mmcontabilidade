@@ -55,8 +55,8 @@ export default function Footer() {
                     </Link>
 
                     <p className="mt-5 text-sm leading-7 text-slate-300">
-                        Soluções contábeis com atendimento direto, orientação clara e suporte para empresas e pessoas
-                        que buscam mais organização e segurança.
+                        Soluções contábeis com atendimento direto, orientação clara e suporte para empresas e
+                        pessoas que buscam mais organização e segurança.
                     </p>
 
                     <Link

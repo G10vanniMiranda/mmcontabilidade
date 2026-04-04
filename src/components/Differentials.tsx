@@ -1,6 +1,7 @@
 'use client'
-import { motion } from 'framer-motion'
-import { ShieldCheck, Cpu, Headset } from 'lucide-react'
+
+import { motion } from 'motion/react'
+import { Cpu, Headset, ShieldCheck } from 'lucide-react'
 
 const items = [
     {
@@ -45,7 +46,7 @@ export const Differentials = () => {
             className="relative overflow-hidden bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 px-6 py-28 md:px-12"
         >
             <motion.div
-                className="absolute -top-32 left-1/2 h-[600px] w-[600px] -translate-x-1/2 rounded-full bg-white/10 blur-[180px]"
+                className="absolute left-1/2 top-32 h-[600px] w-[600px] -translate-x-1/2 rounded-full bg-white/10 blur-[180px]"
                 animate={{ scale: [1, 1.15, 1], opacity: [0.6, 0.9, 0.6] }}
                 transition={{ duration: 12, repeat: Infinity, ease: 'easeInOut' }}
             />
@@ -67,7 +68,8 @@ export const Differentials = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.08 }}
                 >
-                    Unimos conhecimento técnico, tecnologia e atendimento estratégico para entregar muito mais do que contabilidade.
+                    Unimos conhecimento técnico, tecnologia e atendimento estratégico para entregar muito mais do
+                    que contabilidade.
                 </motion.p>
 
                 <motion.div
