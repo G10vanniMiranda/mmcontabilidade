@@ -6,7 +6,7 @@ import { motion } from 'motion/react'
 
 export default function Hero() {
     const buttonBaseClassName =
-        'inline-flex min-h-14 w-full items-center justify-center rounded-md px-6 py-3 text-center text-base font-semibold shadow-md transition-all sm:min-h-[64px] sm:w-[240px]'
+        'inline-flex min-h-14 w-full items-center justify-center rounded-md px-6 py-3 text-center text-base font-semibold shadow-md transition-all sm:min-h-[64px] sm:w-[280px]'
 
     return (
         <section id="hero" className="relative overflow-hidden">
@@ -62,7 +62,11 @@ export default function Hero() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.24 }}
                         >
-                            <motion.div whileHover={{ y: -4, scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+                            <motion.div
+                                className="w-full sm:w-[280px]"
+                                whileHover={{ y: -4, scale: 1.02 }}
+                                whileTap={{ scale: 0.98 }}
+                            >
                                 <Link
                                     href="/imposto-de-renda"
                                     className={`${buttonBaseClassName} border border-blue-200 bg-white text-blue-900 hover:border-blue-300 hover:bg-blue-50`}
@@ -70,7 +74,11 @@ export default function Hero() {
                                     Imposto de Renda
                                 </Link>
                             </motion.div>
-                            <motion.div whileHover={{ y: -4, scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+                            <motion.div
+                                className="w-full sm:w-[280px]"
+                                whileHover={{ y: -4, scale: 1.02 }}
+                                whileTap={{ scale: 0.98 }}
+                            >
                                 <Link
                                     href="#contato"
                                     className={`${buttonBaseClassName} bg-blue-600 text-white hover:bg-blue-700 hover:shadow-blue-300/40`}
